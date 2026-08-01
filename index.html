@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raiatech — aplicaciones web que se instalan como apps</title>
+<meta name="description" content="Raiatech construye aplicaciones web instalables (PWA): rápidas, sin tiendas de apps, con pago único o suscripción.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* --- Dark (por defecto) --- */
+:root{
+  --bg:#10141a;
+  --surface-low:#1c2026;
+  --surface-mid:#262a31;
+  --surface-high:#31353c;
+
+  --electric:#00ff9d;
+  --electric-dim:#00e38b;
+  --cyber:#306998;
+  --cyber-light:#97cbff;
+  --on-electric:#0a1410;
+
+  --on-bg:#dfe2eb;
+  --on-surface:#b9cbbc;
+  --line:#3b4a3f;
+  --glow:rgba(0,255,157,.4);
+
+  --font:'Inter',ui-sans-serif,system-ui,sans-serif;
+  --font-display:'Space Grotesk','Inter',ui-sans-serif,system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+
+  --container:1040px;
+  --gutter:24px;
+  --r-m:10px;
+  --r-pill:99px;
+}
+/* --- Light --- */
+@media (prefers-color-scheme:light){
+  :root{
+    --bg:#f5f5f7;
+    --surface-low:#eaeaed;
+    --surface-mid:#dddde2;
+    --surface-high:#d0d0d7;
+
+    --electric:#00c978;
+    --electric-dim:#00b36b;
+    --cyber:#306998;
+    --cyber-light:#1e5080;
+    --on-electric:#04140c;
+
+    --on-bg:#1a1d24;
+    --on-surface:#4a5568;
+    --line:#c0d0c5;
+    --glow:rgba(0,201,120,.3);
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--on-bg);
+  font-family:var(--font); font-size:1rem; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img{max-width:100%}
+
+.wrap{max-width:var(--container); margin-inline:auto; padding-inline:var(--gutter)}
+.label{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--electric);
+}
+
+/* ---------- header ---------- */
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex; align-items:center; justify-content:space-between; height:64px}
+.logo{
+  font-family:var(--font-display); font-weight:700; font-size:1.1rem;
+  letter-spacing:-.02em; text-decoration:none;
+}
+.logo span{color:var(--electric)}
+nav{display:flex; gap:22px; font-size:.9rem}
+nav a{color:var(--on-surface); text-decoration:none}
+nav a:hover{color:var(--electric)}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 64px; max-width:660px}
+h1{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,5vw,3rem); line-height:1.12; letter-spacing:-.03em;
+  font-weight:700; margin:0 0 20px;
+}
+.hero p{font-size:1.1rem; color:var(--on-surface); margin:0 0 28px}
+.hero .support{
+  margin:32px 0 0; font-family:var(--mono); font-size:.74rem;
+  color:var(--on-surface); opacity:.85; letter-spacing:.02em;
+}
+.btn{
+  display:inline-block; background:var(--electric); color:var(--on-electric);
+  text-decoration:none; font-weight:600; font-size:.95rem;
+  padding:11px 22px; border-radius:var(--r-pill);
+}
+.btn:hover{background:var(--electric-dim); box-shadow:0 0 24px -6px var(--glow)}
+
+/* ---------- apps ---------- */
+section{padding:56px 0; border-top:1px solid var(--line)}
+h2{font-family:var(--font-display); font-size:1.4rem; letter-spacing:-.02em; margin:8px 0 28px; font-weight:500}
+.grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{
+  background:var(--surface-low); border:1px solid var(--line); border-radius:var(--r-m);
+  padding:22px; display:flex; flex-direction:column; gap:10px;
+  text-decoration:none; transition:border-color .15s, background .15s;
+}
+a.card:hover{background:var(--surface-mid); border-color:var(--electric)}
+.card h3{margin:0; font-family:var(--font-display); font-size:1.05rem; font-weight:500; letter-spacing:-.01em}
+.card p{margin:0; font-size:.92rem; color:var(--on-surface); flex:1}
+.card .tag{margin:0; font-size:.95rem; color:var(--on-bg); font-weight:600; flex:none}
+.card .note{margin:0; font-size:.8rem; color:var(--on-surface); opacity:.8; flex:none}
+.meta{display:flex; align-items:center; gap:10px; margin-top:4px}
+.pill{
+  font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+  background:var(--surface-mid); border-radius:var(--r-pill); padding:3px 10px; color:var(--cyber-light);
+}
+.card.soon{opacity:.6}
+
+/* ---------- datos ---------- */
+.datos{
+  margin-top:32px; border-top:1px solid var(--line); padding-top:24px;
+  max-width:660px;
+}
+.datos h3{margin:0 0 14px; font-family:var(--font-display); font-size:1.05rem; font-weight:500}
+.datos p{margin:0 0 12px; font-size:.9rem; color:var(--on-surface)}
+.datos strong{color:var(--on-bg); font-weight:600}
+
+/* ---------- about ---------- */
+.prose{max-width:600px; color:var(--on-surface)}
+.prose p{margin:0 0 14px}
+.prose strong{color:var(--on-bg); font-weight:600}
+.prose a{color:var(--electric); text-decoration:none; border-bottom:1px solid var(--line)}
+.prose a:hover{border-color:var(--electric)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line); padding:32px 0 48px; font-size:.85rem; color:var(--on-surface)}
+footer .wrap{display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between}
+footer a{color:var(--on-surface); text-decoration:none}
+footer a:hover{color:var(--electric)}
+.links{display:flex; flex-wrap:wrap; gap:18px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="/">raia<span>tech</span></a>
+    <nav>
+      <a href="#apps">Apps</a>
+      <a href="#sobre">Sobre</a>
+      <a href="mailto:hola@raiatech.com">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <p class="label">Sin tienda, sin cuentas</p>
+      <h1>Se abre en el navegador. Se queda contigo.</h1>
+      <p>
+        Pinchas un enlace y ya la estás usando. Si te convence, se instala en el móvil
+        o en el escritorio, funciona sin cobertura y guarda tus datos en tu dispositivo,
+        no en mi servidor.
+      </p>
+      <a class="btn" href="#apps">Probar una app ahora</a>
+      <p class="support">Sin registro. Sin anuncios. Sin descargas de 400 MB.</p>
+    </div>
+  </div>
+
+  <section id="apps">
+    <div class="wrap">
+      <p class="label">Catálogo</p>
+      <h2>Apps</h2>
+      <div class="grid">
+
+        <a class="card" href="https://bookreader.raiatech.com">
+          <h3>Bookreader</h3>
+          <p class="tag">Lee. Y pregunta lo que no entiendas.</p>
+          <p>Abre tu EPUB o tu PDF y, cuando te pierdas en el capítulo doce, pregúntale de qué iba el ocho. Sigue el hilo del libro contigo.</p>
+          <p class="note">Tu libro no se sube a ningún sitio. Al preguntar, solo viaja el fragmento necesario para responderte.</p>
+          <div class="meta">
+            <span class="pill">Abrir</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://arete.raiatech.com">
+          <h3>Areté</h3>
+          <p class="tag">Entrena para todo.</p>
+          <p>Fuerza y resistencia en el mismo plan. Siete dominios medidos con tests reales, y tu nivel es el más bajo de los siete: no hay punto débil que esconder.</p>
+          <p class="note">Sin cuenta y sin anuncios. La copia de seguridad, si la quieres, va a tu propio Google Drive.</p>
+          <div class="meta">
+            <span class="pill">Abrir</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="datos">
+        <h3>Dónde están tus datos</h3>
+        <p><strong>Areté:</strong> tus entrenos y tus marcas viven en tu dispositivo. No hay servidor donde mirar, ni siquiera yo. Si activas la copia de seguridad, va a tu Google Drive, no al mío.</p>
+        <p><strong>Bookreader:</strong> el libro y tus notas se quedan en tu dispositivo. Cuando le preguntas algo al agente, se envía a un modelo de IA el fragmento del texto necesario para responderte. Nada más: ni el libro entero, ni tu nombre, ni el resto de tu biblioteca. Si no preguntas, no sale nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <p class="label">Sobre</p>
+      <h2>Qué es Raiatech</h2>
+      <div class="prose">
+        <p>
+          Raiatech es el estudio desde el que publico mis aplicaciones. Todas comparten
+          la misma idea: <strong>una herramienta que resuelve un problema concreto</strong>,
+          sin cuentas obligatorias donde no hacen falta y sin acumular datos que no necesito.
+        </p>
+        <p>
+          Son aplicaciones web, así que se actualizan solas y funcionan igual en Android,
+          iOS, Mac o Windows. Puedes instalarlas desde el propio navegador.
+        </p>
+        <p>
+          Detrás está <a href="https://luisgonzalezbernal.com"><strong>Luis González</strong></a>, ingeniero de datos e IA.
+          Para dudas, fallos o ideas: <a href="mailto:hola@raiatech.com">hola@raiatech.com</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Raiatech</div>
+    <div class="links">
+      <a href="/terminos">Términos</a>
+      <a href="/privacidad">Privacidad</a>
+      <a href="mailto:hola@raiatech.com">hola@raiatech.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

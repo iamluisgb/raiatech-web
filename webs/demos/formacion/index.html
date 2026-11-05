@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autoescuela Alba — Sácate el carnet en Badajoz</title>
+<meta name="description" content="Autoescuela en Badajoz. Carnet B desde 450 €, A2, CAP y reciclaje de puntos. Profesores propios, 87% de aprobados y matrícula en 10 minutos.">
+<link rel="canonical" href="https://raiatech.com/webs/demos/formacion/">
+<link rel="stylesheet" href="../shared/demo.css">
+<style>
+  :root{
+    --brand:#14418a; --brand-ink:#ffffff; --accent:#ff6b35;
+    --bg:#ffffff; --surface:#f4f6fb; --line:#e2e7f0; --text:#121826; --muted:#5a6478;
+  }
+  .hero{background:linear-gradient(180deg,var(--surface),var(--bg));}
+  .steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .steps .card{padding-top:18px}
+  .steps .card::before{
+    counter-increment:s;content:"0" counter(s);
+    display:block;font:800 22px/1 ui-monospace,monospace;color:var(--accent);margin-bottom:10px;
+  }
+  .stat{font:800 34px/1 var(--font);color:var(--brand);letter-spacing:-.02em}
+</style>
+
+<!-- Datos estructurados: centro + cursos con precio + valoración + reseñas + FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://raiatech.com/webs/demos/formacion/#business",
+      "name": "Autoescuela Alba",
+      "description": "Autoescuela en Badajoz: carnet B, A2, CAP, ADR y reciclaje de puntos. Profesores propios y coches nuevos.",
+      "url": "https://raiatech.com/webs/demos/formacion/",
+      "telephone": "+34924000003",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C/ Ejemplo, 24",
+        "postalCode": "06010",
+        "addressLocality": "Badajoz",
+        "addressRegion": "Extremadura",
+        "addressCountry": "ES"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "112", "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Laura G." },
+          "datePublished": "2026-04-11",
+          "reviewBody": "Aprobé el teórico a la primera con la app. Y las prácticas siempre con el mismo profesor.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        }
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Pack Básico · carnet B (matrícula + teórica + 10 clases)", "priceCurrency": "EUR", "price": "450", "itemOffered": { "@type": "Service", "name": "Carnet B (coche)" } },
+        { "@type": "Offer", "name": "Pack Completo · carnet B (matrícula + teórica + 20 clases + tasas)", "priceCurrency": "EUR", "price": "780", "itemOffered": { "@type": "Service", "name": "Carnet B (coche) completo" } },
+        { "@type": "Offer", "name": "Clase suelta", "priceCurrency": "EUR", "price": "28", "itemOffered": { "@type": "Service", "name": "Clase práctica suelta" } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuánto cuesta sacarse el carnet B?",
+          "acceptedAnswer": { "@type": "Answer", "text": "El Pack Básico son 450 € (matrícula, teórica y 10 clases). El Pack Completo son 780 € e incluye 20 clases y las tasas de examen. Se puede financiar hasta en 6 meses sin intereses." } },
+        { "@type": "Question", "name": "¿Puedo empezar viniendo de otra autoescuela?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Si te quedaste a medias, te convalidamos lo que llevas hecho y empiezas con clases de refuerzo." } },
+        { "@type": "Question", "name": "¿Cómo se reservan las clases prácticas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Desde el móvil, por WhatsApp, eligiendo franja horaria. También abrimos los sábados por la mañana." } },
+        { "@type": "Question", "name": "¿Cuándo puedo empezar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Abrimos grupo cada 15 días. La matrícula se hace en 10 minutos, presencialmente o por WhatsApp." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bar">Esto es un <b>ejemplo</b> de web para una autoescuela · <a href="../../index.html">ver todos los ejemplos</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Autoescuela <span>Alba</span></div>
+    <nav>
+      <a href="#cursos">Cursos</a>
+      <a href="#precios">Precios</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#matricula">Matrícula</a>
+    </nav>
+    <a class="btn btn--accent" href="#matricula">Matricúlate</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Autoescuela en Badajoz</p>
+        <div class="rating">★★★★★ <b>4,9</b> · 112 reseñas · 87% de aprobados</div>
+        <h1>Sácate el carnet sin perder clases ni tiempo.</h1>
+        <p class="lead">Profesores propios, coches nuevos y test ilimitados. Te decimos desde el primer día cuánto vas a tardar y cuánto vas a pagar.</p>
+        <p class="from">Carnet B desde <b>450 €</b></p>
+        <div class="btn-row">
+          <a class="btn btn--accent" href="#matricula">Quiero matricularme</a>
+          <a class="btn btn--ghost" href="#precios">Ver precios</a>
+        </div>
+        <div class="guarantee"><span aria-hidden="true">✓</span><span><b>Sin letra pequeña.</b> Lo que ves es lo que pagas: matrícula, teórica, clases y tasas según el pack.</span></div>
+        <small>Plazas cada 15 días · Financiación sin intereses · Clases los sábados</small>
+      </div>
+      <div class="shot" role="img" aria-label="Coche de prácticas de la autoescuela"><span>Coche de prácticas</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="cursos">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Cursos</p>
+        <h2>Lo que puedes sacarte aquí</h2>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="ico">◆</div><h3>Carnet B · Coche</h3><p>Manual o automático. Teórica online y prácticas a tu ritmo.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Carnet A2 · Moto</h3><p>Prácticas en circuito propio y clases de circulación.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>CAP y ADR</h3><p>Formación para conductores profesionales. Cursos mensuales.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Reciclaje de puntos</h3><p>Cursos de sensibilización y recuperación del permiso.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Clases de refuerzo</h3><p>Si venías de otra autoescuela y te quedaste a medias.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Turismo y remolque</h3><p>Permisos B96 y B+E para arrastrar caravana o remolque.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="precios">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Precios</p>
+        <h2>Sin letra pequeña</h2>
+        <p>Tarifas cerradas. Lo que ves es lo que pagas: matrícula, tasas y clases incluidas.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Pack Básico</h3><p>Matrícula + teórica + 10 clases prácticas</p><span class="price-tag">450 €</span></article>
+        <article class="card" style="border-color:var(--accent)"><h3>Pack Completo</h3><p>Matrícula + teórica + 20 clases + tasas de examen</p><span class="price-tag">780 €</span></article>
+        <article class="card"><h3>Clase suelta</h3><p>Si solo necesitas clases de refuerzo</p><span class="price-tag">28 €</span></article>
+      </div>
+      <p class="price-note">Financiable hasta en 6 meses sin intereses. Descuento para estudiantes y desempleados.</p>
+    </div>
+  </section>
+
+  <section class="section" id="como">
+    <div class="wrap">
+      <div class="section-head"><p class="label">Cómo funciona</p><h2>De la matrícula al examen</h2></div>
+      <div class="steps">
+        <article class="card"><h3>Te matriculas</h3><p>En 10 minutos, presencialmente o por WhatsApp.</p></article>
+        <article class="card"><h3>Preparas la teórica</h3><p>App propia con test ilimitados y estadísticas de fallos.</p></article>
+        <article class="card"><h3>Apruebas el test</h3><p>Y te asignamos profesor y coche fijo.</p></article>
+        <article class="card"><h3>Prácticas y examen</h3><p>Reservas las clases desde el móvil, cuando te venga bien.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="grid">
+        <div><span class="stat">87%</span><p style="margin:4px 0 0">de aprobados en práctica</p></div>
+        <div><span class="stat">1.200</span><p style="margin:4px 0 0">alumnos desde 2011</p></div>
+        <div><span class="stat">4</span><p style="margin:4px 0 0">coches y 2 motos propias</p></div>
+        <div><span class="stat">15</span><p style="margin:4px 0 0">días entre convocatorias</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="opiniones">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Opiniones</p>
+        <h2>Lo que dicen los alumnos</h2>
+        <div class="rating">★★★★★ <b>4,9</b> · 112 reseñas en Google</div>
+      </div>
+      <div class="grid">
+        <blockquote class="quote"><div class="stars">★★★★★</div><p>“Aprobé el teórico a la primera con la app. Y las prácticas siempre con el mismo profesor.”</p><footer>Laura G. · Badajoz</footer></blockquote>
+        <blockquote class="quote"><div class="stars">★★★★★</div><p>“Venía de otra autoescuela con la práctica a medias. Me cogieron y en un mes lo tenía.”</p><footer>Rubén M. · San Roque</footer></blockquote>
+        <blockquote class="quote"><div class="stars">★★★★★</div><p>“Reservar clases por WhatsApp es una maravilla, no tienes que llamar ni aguantar esperas.”</p><footer>Sara P. · Valdepasillas</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="faq">
+    <div class="wrap">
+      <div class="section-head"><p class="label">Preguntas frecuentes</p><h2>Antes de matricularte</h2></div>
+      <details class="faq" open><summary>¿Cuánto cuesta sacarse el carnet B?</summary><p>El <b>Pack Básico son 450 €</b> (matrícula, teórica y 10 clases). El <b>Pack Completo son 780 €</b> e incluye 20 clases y las tasas de examen. Se puede financiar hasta en 6 meses sin intereses.</p></details>
+      <details class="faq"><summary>¿Puedo empezar viniendo de otra autoescuela?</summary><p>Sí. Si te quedaste a medias, te convalidamos lo que llevas hecho y empiezas con clases de refuerzo.</p></details>
+      <details class="faq"><summary>¿Cómo se reservan las clases prácticas?</summary><p>Desde el móvil, por WhatsApp, eligiendo franja horaria. También abrimos los sábados por la mañana.</p></details>
+      <details class="faq"><summary>¿Cuándo puedo empezar?</summary><p>Abrimos grupo cada 15 días. La matrícula se hace en 10 minutos, presencialmente o por WhatsApp.</p></details>
+    </div>
+  </section>
+
+  <section class="section" id="matricula">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Matrícula</p>
+        <h2>Empieza esta quincena</h2>
+        <p class="lead">Déjanos tus datos y te llamamos para decirte qué necesitas y cuándo empezarías.</p>
+        <ul class="checks">
+          <li>Teléfono y WhatsApp: <b>924 000 003</b></li>
+          <li>C/ Ejemplo, 24 · 06010 Badajoz</li>
+          <li>Lunes a viernes de 9:00 a 14:00 y de 17:00 a 20:30</li>
+          <li class="reg">Centro autorizado nº 00000 · Dirección General de Tráfico</li>
+        </ul>
+        <div class="btn-row"><a class="btn btn--accent" href="https://wa.me/34924000003">Matricularme por WhatsApp</a></div>
+      </div>
+      <form class="form" onsubmit="return false">
+        <div class="field"><label for="n">Nombre</label><input id="n" placeholder="Tu nombre" required></div>
+        <div class="field"><label for="t">Teléfono</label><input id="t" type="tel" placeholder="600 000 000" required></div>
+        <div class="field"><label for="c">¿Qué carnet?</label>
+          <select id="c"><option>Carnet B (coche)</option><option>Carnet A2 (moto)</option><option>CAP / ADR</option><option>Reciclaje de puntos</option><option>Clases de refuerzo</option></select>
+        </div>
+        <div class="field"><label for="h">¿Cuándo quieres empezar?</label><input id="h" placeholder="Ej.: cuanto antes / en septiembre"></div>
+        <button class="btn" type="submit">Solicitar información</button>
+        <small>Te llamamos nosotros en menos de 24 h. Sin compromiso.</small>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Quedan plazas este mes</h2>
+        <p>Grupos reducidos. Reserva tu plaza y empieza la teórica hoy mismo.</p>
+        <a class="btn btn--accent" href="tel:+34924000003">Llamar al 924 000 003</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span><b>Autoescuela Alba</b> · Badajoz</span>
+    <span>924 000 003</span>
+    <span class="reg">Centro autorizado nº 00000</span>
+    <span style="margin-left:auto">Aviso legal · Privacidad · Cookies</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/34924000003">WhatsApp</a>
+<div class="ribbon">Ejemplo</div>
+
+<div class="cookies" id="cookies">
+  <p>Usamos cookies propias para recordar tu solicitud de información. Nada de publicidad de terceros.</p>
+  <button class="no" onclick="document.getElementById('cookies').remove()">Rechazar</button>
+  <button class="ok" onclick="document.getElementById('cookies').remove()">Aceptar</button>
+</div>
+
+</body>
+</html>

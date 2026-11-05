@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Rural Las Vaguadas — Alojamiento cerca de Badajoz</title>
+<meta name="description" content="Casa rural con piscina a 15 minutos de Badajoz. Desde 95 €/noche, reserva directa con mejor precio garantizado y sin comisiones.">
+<link rel="canonical" href="https://raiatech.com/webs/demos/alojamiento/">
+<link rel="stylesheet" href="../shared/demo.css">
+<style>
+  :root{
+    --brand:#2f5d50; --brand-ink:#ffffff; --accent:#c2703d;
+    --bg:#ffffff; --surface:#f7f4ef; --line:#e6e0d6; --text:#1c2420; --muted:#5f6b64;
+  }
+  .hero{background:linear-gradient(180deg,var(--surface),var(--bg));}
+  .booker{
+    margin-top:20px;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px;display:grid;gap:12px;grid-template-columns:repeat(3,1fr) auto;align-items:end;
+  }
+  .booker .field{margin:0}
+  .booker button{height:46px}
+  @media (max-width:820px){ .booker{grid-template-columns:1fr 1fr;} .booker .btn{grid-column:1/-1;width:100%;justify-content:center} }
+  /* Los campos de fecha traen ancho mínimo propio: hay que anularlo o rompen la rejilla en móvil */
+  .booker .field{min-width:0}
+  .booker input,.booker select{min-width:0}
+  @media (max-width:420px){ .booker{grid-template-columns:1fr} }
+  .price{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .price th,.price td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:15px}
+  .price th{background:var(--surface);font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .price tr:last-child td{border-bottom:0}
+  .price td b{color:var(--brand)}
+  .badge{display:inline-block;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);font-weight:700;font-size:12.5px;padding:5px 11px;border-radius:999px;margin-bottom:10px}
+  /* Estilos de precio, garantía, valoración y cookies: en shared/demo.css */
+  @media (max-width:520px){ .price th,.price td{padding:10px 8px;font-size:13px} }
+</style>
+
+<!-- Datos estructurados: negocio + valoración + oferta + FAQ.
+     Es lo que hace que Google pueda mostrar estrellas y precio en el resultado. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://raiatech.com/webs/demos/alojamiento/#business",
+      "name": "Casa Rural Las Vaguadas",
+      "description": "Casa rural con piscina a 15 minutos de Badajoz. Reserva directa sin comisiones.",
+      "url": "https://raiatech.com/webs/demos/alojamiento/",
+      "telephone": "+34924000001",
+      "email": "reservas@lasvaguadas.ejemplo",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Finca El Ejemplo, s/n",
+        "postalCode": "06195",
+        "addressLocality": "Badajoz",
+        "addressRegion": "Extremadura",
+        "addressCountry": "ES"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 38.8761, "longitude": -6.9690 },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Piscina privada", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Wifi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking gratuito", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Admite mascotas", "value": true }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "137",
+        "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Nuria y David" },
+          "datePublished": "2026-08-14",
+          "reviewBody": "Reservamos directo y nos ahorramos casi 40 € frente a la plataforma. La casa impecable.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Familia Cordero" },
+          "datePublished": "2026-07-02",
+          "reviewBody": "Éramos 8 con niños. La piscina y el porche nos salvaron el fin de semana.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Casa completa (hasta 8 personas)",
+          "priceCurrency": "EUR",
+          "price": "180",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "180",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY",
+            "unitText": "noche"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuál es el precio mínimo por noche?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Desde 95 €/noche en el apartamento para 4 personas y desde 160 €/noche la casa completa. Mínimo dos noches." } },
+        { "@type": "Question", "name": "¿Se admiten mascotas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, con un suplemento de 10 € por estancia." } },
+        { "@type": "Question", "name": "¿Puedo cancelar sin coste?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, cancelación gratuita hasta 7 días antes de la entrada." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="bar">Esto es un <b>ejemplo</b> de web para una casa rural · <a href="../../index.html">ver todos los ejemplos</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Las <span>Vaguadas</span></div>
+    <nav>
+      <a href="#casa">La casa</a>
+      <a href="#alojamientos">Alojamientos</a>
+      <a href="#entorno">Entorno</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#reservar">Reservar</a>
+    </nav>
+    <a class="btn btn--accent" href="#reservar">Reservar</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge">Reserva directa · sin comisiones</span>
+      <div class="rating">★★★★★ <b>4,9</b> · 137 reseñas en Google</div>
+      <h1>Tu escapada junto al Guadiana, sin intermediarios.</h1>
+      <p class="lead">Casa rural con piscina, barbacoa y capacidad para 8 personas, a 15 minutos de Badajoz.</p>
+      <p class="from">Desde <b>95 €</b>/noche</p>
+
+      <form class="booker" onsubmit="return false">
+        <div class="field"><label for="in">Entrada</label><input id="in" type="date"></div>
+        <div class="field"><label for="out">Salida</label><input id="out" type="date"></div>
+        <div class="field"><label for="gu">Huéspedes</label>
+          <select id="gu"><option>1</option><option>2</option><option selected>4</option><option>6</option><option>8</option></select>
+        </div>
+        <button class="btn btn--accent" type="submit">Ver disponibilidad</button>
+      </form>
+
+      <!-- Arreglo 4: la mejor tarifa, justo al lado del botón de reserva -->
+      <div class="guarantee">
+        <span aria-hidden="true">✓</span>
+        <span><b>Mejor precio garantizado.</b> Si lo encuentras más barato en otra web, te lo igualamos y te invitamos al desayuno.</span>
+      </div>
+      <small>Respuesta en menos de 2 horas, por WhatsApp o email.</small>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <!-- Arreglo 1: imágenes ligeras. El hero se carga en prioridad; el resto, en diferido.
+           Con fotos reales sería:
+           <img src="hero-900.webp" srcset="hero-600.webp 600w, hero-900.webp 900w, hero-1400.webp 1400w"
+                sizes="(max-width: 820px) 100vw, 1080px" width="1080" height="470" alt="Piscina de la casa" fetchpriority="high"> -->
+      <div class="shot" style="aspect-ratio:16/7" role="img" aria-label="Foto de la casa"><span>Foto de la casa</span></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="casa">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">La casa</p>
+        <h2>Todo lo que necesitas para desconectar</h2>
+        <p>Una casa de campo de 240 m² con parcela de 4.000 m², rodeada de encinas y a un paso de Badajoz.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="ico">◆</div><h3>Piscina privada</h3><p>Con solárium y tumbonas. Abierta de mayo a septiembre.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Barbacoa y porche</h3><p>Zona de comedor exterior cubierta y leña incluida.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Cocina completa</h3><p>Lavavajillas, horno, microondas y menaje para 8.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Chimenea</h3><p>Salón con chimenea de leña, ideal de octubre a marzo.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>WiFi y TV</h3><p>Fibra, Smart TV y altavoz. Teletrabajo sin problema.</p></article>
+        <article class="card"><div class="ico">◆</div><h3>Parking privado</h3><p>Hasta 3 coches dentro de la finca, sin coste.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="alojamientos">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Alojamientos</p>
+        <h2>Elige cómo quieres alojarte</h2>
+        <p>Precios orientativos por noche. El precio final depende de la temporada y aparece al consultar tus fechas.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Casa completa</h3><p>4 habitaciones · 2 baños · hasta 8 personas</p><span class="price-tag">Desde 180 €/noche</span></article>
+        <article class="card"><h3>Apartamento</h3><p>2 habitaciones · baño y cocina propios · hasta 4 personas</p><span class="price-tag">Desde 95 €/noche</span></article>
+        <article class="card"><h3>Habitación doble</h3><p>Con baño privado · acceso a zonas comunes · 2 personas</p><span class="price-tag">Desde 55 €/noche</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="entorno">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">El entorno</p>
+        <h2>Qué puedes hacer aquí</h2>
+        <p>A 15 min de Badajoz, 40 min de Mérida y a 1 h de la frontera. Rutas de senderismo, embalse y dehesa.</p>
+      </div>
+      <div class="gallery">
+        <div class="shot" role="img" aria-label="Piscina"><span>Piscina</span></div>
+        <div class="shot" role="img" aria-label="Porche"><span>Porche</span></div>
+        <div class="shot" role="img" aria-label="Dehesa"><span>Dehesa</span></div>
+        <div class="shot" role="img" aria-label="Embalse"><span>Embalse</span></div>
+        <div class="shot" role="img" aria-label="Salón"><span>Salón</span></div>
+        <div class="shot" role="img" aria-label="Atardecer"><span>Atardecer</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tarifas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Tarifas</p>
+        <h2>Precios claros, sin comisiones</h2>
+      </div>
+      <div style="overflow-x:auto">
+      <table class="price">
+        <thead><tr><th>Temporada</th><th>Noche entre semana</th><th>Noche fin de semana</th><th>Semana</th></tr></thead>
+        <tbody>
+          <tr><td>Baja (oct–mar)</td><td><b>160 €</b></td><td><b>190 €</b></td><td><b>950 €</b></td></tr>
+          <tr><td>Media (abr–jun · sep)</td><td><b>180 €</b></td><td><b>210 €</b></td><td><b>1.100 €</b></td></tr>
+          <tr><td>Alta (jul–ago)</td><td><b>210 €</b></td><td><b>240 €</b></td><td><b>1.350 €</b></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="margin-top:12px"><small>Mínimo 2 noches. Fianza de 100 € reembolsable. Mascotas admitidas (10 €/estancia). Cancelación gratuita hasta 7 días antes.</small></p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Opiniones</p>
+        <h2>Huéspedes recientes</h2>
+        <div class="rating">★★★★★ <b>4,9</b> · 137 reseñas · <a href="#reservar">ver todas</a></div>
+      </div>
+      <div class="grid">
+        <blockquote class="quote"><div class="stars">★★★★★</div><p>“Reservamos directo y nos ahorramos casi 40 € frente a la plataforma. La casa impecable.”</p><footer>Nuria y David · Sevilla</footer></blockquote>
+        <blockquote class="quote"><div class="stars">★★★★★</div><p>“Éramos 8 con niños. La piscina y el porche nos salvaron el fin de semana.”</p><footer>Familia Cordero · Cáceres</footer></blockquote>
+        <blockquote class="quote"><div class="stars">★★★★★</div><p>“Respondieron en 20 minutos por WhatsApp y nos dejaron entrar antes.”</p><footer>Ignacio L. · Lisboa</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reservar">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">Reservar</p>
+        <h2>Pregúntanos por tus fechas</h2>
+        <p class="lead">Dinos cuándo quieres venir y te confirmamos disponibilidad y precio en menos de 2 horas.</p>
+        <ul class="checks">
+          <li>Teléfono y WhatsApp: <b>924 000 001</b></li>
+          <li>Finca El Ejemplo, s/n · 06195 Badajoz</li>
+          <li>Entrada 16:00 · Salida 12:00</li>
+          <li class="reg">Registro de turismo: <b>TR-BA-00000</b></li>
+        </ul>
+        <div class="btn-row"><a class="btn btn--accent" href="https://wa.me/34924000001">Preguntar por WhatsApp</a></div>
+      </div>
+      <form class="form" onsubmit="return false">
+        <div class="field"><label for="n">Nombre</label><input id="n" placeholder="Tu nombre" required></div>
+        <div class="field"><label for="t">Teléfono o email</label><input id="t" placeholder="Para responderte" required></div>
+        <div class="field"><label for="f">Fechas</label><input id="f" placeholder="Ej.: 12–15 de octubre"></div>
+        <div class="field"><label for="p">Personas</label><input id="p" type="number" min="1" value="4"></div>
+        <button class="btn" type="submit">Solicitar disponibilidad</button>
+        <small>Sin pago ahora. Solo comprobamos fechas y te decimos el precio exacto.</small>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Mejor precio, reservando aquí</h2>
+        <p>Sin comisiones de plataforma: ese ahorro es tuyo.</p>
+        <a class="btn btn--accent" href="tel:+34924000001">Llamar al 924 000 001</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span><b>Casa Rural Las Vaguadas</b> · Badajoz</span>
+    <span>924 000 001</span>
+    <span class="reg">Registro TR-BA-00000</span>
+    <span style="margin-left:auto">Aviso legal · Privacidad · Cookies</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/34924000001">WhatsApp</a>
+<div class="ribbon">Ejemplo</div>
+
+<!-- Arreglo 5: cookies discretas abajo, sin tapar el hero ni el mensaje principal -->
+<div class="cookies" id="cookies">
+  <p>Usamos cookies propias para recordar tus fechas. Nada de publicidad de terceros.</p>
+  <button class="no" onclick="document.getElementById('cookies').remove()">Rechazar</button>
+  <button class="ok" onclick="document.getElementById('cookies').remove()">Aceptar</button>
+</div>
+
+</body>
+</html>

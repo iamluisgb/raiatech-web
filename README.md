@@ -1,42 +1,15 @@
 # raiatech-web
 
-Landing de Raiatech — raiatech.com
-
-Marca paraguas desde la que se publican las PWAs: [Bookreader](https://github.com/iamluisgb/bookreader) y [Areté](https://github.com/iamluisgb/arete).
-
-## Cómo funciona
-
-Una página estática, un solo fichero. Sin build, sin dependencias que instalar.
+Web de Raiatech (raiatech.com): consultoría técnica e IA. Estática, sin build.
 
 ```
-index.html   la landing entera (CSS inline)
-CNAME        dominio para GitHub Pages
+index.html              portada: servicios, proceso, pruebas y contacto (CSS inline)
+auditoria-ejemplo.html  informe real de luisgonzalezbernal.com, generado en auditorias-web (noindex)
+aviso-legal.html, privacidad.html, terminos.html
+webs/                   kit para negocios locales: sin enlazar desde la portada y noindex (origen: experimentos/raiatech-webs)
+CNAME                   dominio para GitHub Pages
 ```
 
-Para verla en local:
+Reglas: no nombrar clientes ni publicar fichas de auditoría de terceros sin permiso.
 
-```bash
-python3 -m http.server 8000
-```
-
-## Despliegue
-
-GitHub Pages sirve la rama `main` desde la raíz. Un push a `main` publica.
-
-### DNS
-
-El dominio está en Namecheap. Registros necesarios:
-
-| Tipo  | Host | Valor             |
-|-------|------|-------------------|
-| A     | @    | 185.199.108.153   |
-| A     | @    | 185.199.109.153   |
-| A     | @    | 185.199.110.153   |
-| A     | @    | 185.199.111.153   |
-| CNAME | www  | iamluisgb.github.io |
-
-## Pendiente
-
-- Páginas legales: `/terminos` y `/privacidad` (enlazadas en el pie, aún sin escribir).
-- Subdominios de las apps: `bookreader.raiatech.com` y `arete.raiatech.com`.
-- Reactivar el enlace de reembolsos cuando haya cobros por Polar.
+En local: `python3 -m http.server 8000`

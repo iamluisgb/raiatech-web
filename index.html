@@ -75,6 +75,7 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
 .score div{display:grid;grid-template-columns:minmax(0,1fr) 72px 32px;gap:10px;align-items:center;font-size:.8rem;color:var(--on-surface)}
 .score i{display:block;height:5px;border-radius:3px;background:linear-gradient(to right,var(--acento) var(--p),var(--surface-2) var(--p))}.score b{font:500 .74rem var(--mono);color:var(--on-bg);text-align:right}
 .paquetes{list-style:none;margin:2px 0 4px;padding:0;display:grid;gap:10px}.paquetes li{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:0 0 10px;border-bottom:1px solid var(--line)}.paquetes li:last-child{border-bottom:0;padding-bottom:0}.paquetes b{color:var(--on-bg);font-weight:600}.paquetes span{font:500 .74rem var(--mono);color:var(--acento);align-self:center}.paquetes small{grid-column:1/-1;font-size:.84rem;color:var(--on-surface);line-height:1.45}
+.card.ancha{grid-column:1/-1}.grid2.sub{gap:12px 24px;margin:4px 0}.grid2.sub b{color:var(--on-bg);font-weight:600}.grid2.sub ul{margin:6px 0 0}
 .caso{margin:0 0 6px;font:500 .72rem var(--mono);letter-spacing:.04em;color:var(--acento);text-transform:uppercase}
 .score small{font-size:.76rem;color:var(--on-surface)}
 .yo{display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;align-items:start}.yo img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:12px;background:var(--surface-2)}
@@ -117,8 +118,8 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
 
   <section id="servicios"><div class="wrap">
     <p class="label">Servicios</p>
-    <h2>Dos formas de empezar</h2>
-    <p class="intro">Si aún no sabes qué falla, empieza por la auditoría. Si ya sabes qué quieres construir, pasa directamente al trabajo en equipo.</p>
+    <h2>Tres formas de empezar</h2>
+    <p class="intro">Si aún no sabes qué falla, empieza por la auditoría. Si ya sabes qué quieres construir, pasa directamente al trabajo en equipo. Y si lo que necesitas es que tu equipo sepa hacerlo, empieza por la formación.</p>
     <div class="grid2">
       <div class="card">
         <h3>Auditoría técnica</h3>
@@ -142,6 +143,15 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
         <ul><li>De prototipo a producción, con pruebas, monitorización y alertas</li><li>Agentes y automatizaciones sobre tus datos y tus herramientas</li><li>Tu equipo aprende a mantenerlo: también soy profesor</li></ul>
         <p class="pie">Por jornadas: contratas los días que necesitas, sin mínimo.</p>
       </div>
+      <div class="card ancha" id="formacion">
+        <h3>Formación para tu equipo</h3>
+        <p>Cursos y talleres en tu empresa o en remoto, con temario adaptado y práctica sobre vuestros propios casos. He dado formación en Hack a Boss y en FEVAL desde 2023.</p>
+        <div class="grid2 sub">
+          <div><b>Para equipos no técnicos</b><ul><li>Qué se puede pegar en ChatGPT y qué no</li><li>Cómo trabajar con IA en las tareas de cada día</li><li>Lo que pide la ley europea de IA: formar a quien la usa</li></ul></div>
+          <div><b>Para equipos técnicos</b><ul><li>Llevar IA a producción: evaluación, monitorización y costes</li><li>SRE y observabilidad</li><li>Agentes sobre tus datos y tus herramientas</li></ul></div>
+        </div>
+        <p class="pie">Temario y precio cerrados por escrito. Suele poder bonificarse con el crédito de Fundae.</p>
+      </div>
     </div>
   </div></section>
 
@@ -160,7 +170,7 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
       <div class="card">
         <h3>Empresas que ya usan ChatGPT</h3>
         <ul><li>Cada uno lo usa a su manera, y nadie sabe qué datos de clientes acaban ahí</li><li>Repetís la misma tarea en el chat todos los días: resumir, redactar, clasificar</li><li>La ley europea de IA os pide formar al equipo en su uso y no sabéis por dónde empezar</li></ul>
-        <p class="pie">Un taller para el equipo y un día de diagnóstico para elegir qué automatizar, a precio cerrado.</p>
+        <p class="pie">Un <a href="#formacion">taller para el equipo</a> y un día de diagnóstico para elegir qué automatizar, a precio cerrado.</p>
       </div>
     </div>
   </div></section>
@@ -227,6 +237,7 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
     <div class="ops">
       <a class="op" href="mailto:hola@raiatech.com?subject=Auditor%C3%ADa%20t%C3%A9cnica">Quiero una auditoría</a>
       <a class="op" href="mailto:hola@raiatech.com?subject=Ingeniero%20en%20mi%20equipo">Quiero un ingeniero en mi equipo</a>
+      <a class="op" href="mailto:hola@raiatech.com?subject=Formaci%C3%B3n%20para%20mi%20equipo">Quiero formación para mi equipo</a>
       <a class="op" href="mailto:hola@raiatech.com?subject=Tengo%20un%20problema%20t%C3%A9cnico">Aún no lo tengo claro</a>
     </div>
   </div></div></section>

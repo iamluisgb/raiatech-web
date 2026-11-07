@@ -74,6 +74,8 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
 .score{display:grid;gap:7px;margin:6px 0 2px;padding:14px;border:1px solid var(--line);border-radius:8px;background:color-mix(in srgb,var(--bg) 50%,transparent)}
 .score div{display:grid;grid-template-columns:minmax(0,1fr) 72px 32px;gap:10px;align-items:center;font-size:.8rem;color:var(--on-surface)}
 .score i{display:block;height:5px;border-radius:3px;background:linear-gradient(to right,var(--acento) var(--p),var(--surface-2) var(--p))}.score b{font:500 .74rem var(--mono);color:var(--on-bg);text-align:right}
+.paquetes{list-style:none;margin:2px 0 4px;padding:0;display:grid;gap:10px}.paquetes li{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:0 0 10px;border-bottom:1px solid var(--line)}.paquetes li:last-child{border-bottom:0;padding-bottom:0}.paquetes b{color:var(--on-bg);font-weight:600}.paquetes span{font:500 .74rem var(--mono);color:var(--acento);align-self:center}.paquetes small{grid-column:1/-1;font-size:.84rem;color:var(--on-surface);line-height:1.45}
+.caso{margin:0 0 6px;font:500 .72rem var(--mono);letter-spacing:.04em;color:var(--acento);text-transform:uppercase}
 .score small{font-size:.76rem;color:var(--on-surface)}
 .yo{display:grid;grid-template-columns:200px minmax(0,1fr);gap:36px;align-items:start}.yo img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:12px;background:var(--surface-2)}
 .yo p{margin:0 0 14px;color:var(--on-surface);max-width:64ch}.yo strong{color:var(--on-bg);font-weight:600}.yo a{color:var(--acento)}
@@ -120,16 +122,17 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
     <div class="grid2">
       <div class="card">
         <h3>Auditoría técnica</h3>
-        <p>Reviso tu software, sea una web, una app, una API, un pipeline de datos o un sistema con IA. Mido, dejo evidencia y te digo qué arreglar primero.</p>
+        <p>Reviso tu software con mediciones y evidencia, y te digo qué arreglar primero. Tres paquetes, según lo que tengas:</p>
+        <ul class="paquetes"><li><b>Tu web o tu app</b><span>3-5 días</span><small>Rendimiento, móvil y accesibilidad, SEO, seguridad básica y experiencia de uso.</small></li><li><b>Fiabilidad de tu servicio</b><span>1 semana</span><small>Monitorización y alertas, despliegues y vuelta atrás, copias de seguridad, puntos únicos de fallo y coste de la nube.</small></li><li><b>Tu sistema con IA</b><span>1 semana</span><small>Cómo se mide la calidad de las respuestas, qué pasa cuando inventa o falla el proveedor, coste por tarea, datos y privacidad.</small></li></ul>
         <div class="score" aria-label="Ejemplo: notas reales de la auditoría de luisgonzalezbernal.com">
           <div>Rendimiento<i style="--p:100%"></i><b>4/4</b></div>
           <div>Móvil y accesibilidad<i style="--p:100%"></i><b>4/4</b></div>
           <div>SEO y estructura<i style="--p:87.5%"></i><b>3,5</b></div>
           <div>Seguridad<i style="--p:62.5%"></i><b>2,5</b></div>
           <div>Higiene y uso<i style="--p:100%"></i><b>4/4</b></div>
-          <small>Ejemplo con mi propia web: 18 sobre 20. Las áreas cambian según lo que audite.</small>
+          <small>Ejemplo del paquete «Tu web o tu app» con mi propia web: 18 sobre 20.</small>
         </div>
-        <ul><li>Nota por área: arquitectura y código, fiabilidad y monitorización, seguridad, rendimiento y costes; y en sistemas con IA, calidad de las respuestas y qué pasa cuando fallan</li><li>Cada fallo con su evidencia y por qué importa</li><li>Lista de arreglos ordenada, para tu equipo o para mí</li></ul>
+        <ul><li>Informe con nota por área y cada fallo con su evidencia</li><li>Lista de arreglos ordenada, para tu equipo o para mí</li><li>Una hora para repasarlo con tu equipo</li></ul>
         <p class="pie">Precio cerrado, antes de empezar. <a href="auditoria-ejemplo.html">Ver un ejemplo</a></p>
       </div>
       <div class="card">
@@ -176,11 +179,11 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
   <section id="pruebas"><div class="wrap">
     <p class="label">Pruebas</p>
     <h2>Lo que he hecho, con números</h2>
-    <p class="intro">Cifras de sistemas reales y productos que puedes abrir ahora mismo.</p>
+    <p class="intro">Casos reales, sin nombres de clientes por confidencialidad, y productos que puedes abrir ahora mismo.</p>
     <div class="grid3 num">
-      <div class="card"><div class="cifra">99,97 %</div><p>de disponibilidad en una plataforma de automatización con unas 3.000 tareas al día.</p></div>
-      <div class="card"><div class="cifra">−90 %</div><p>de tiempo para asignar incidentes, con un clasificador propio sobre ServiceNow.</p></div>
-      <div class="card"><div class="cifra">16 → 18</div><p>sobre 20 en <a href="auditoria-ejemplo.html">mi propia web</a>, auditada con el mismo método y repetida tras los arreglos.</p></div>
+      <div class="card"><p class="caso">Farmacéutica global · SRE</p><div class="cifra">99,97 %</div><p>de disponibilidad en una plataforma de automatización con unas 3.000 tareas al día, con el equipo de SRE que lideré.</p></div>
+      <div class="card"><p class="caso">Farmacéutica global · IA para operaciones</p><div class="cifra">−90 %</div><p>de tiempo para asignar incidentes: un clasificador propio sobre ServiceNow manda cada incidente al equipo que debe resolverlo.</p></div>
+      <div class="card"><p class="caso">Raiatech · auditoría web</p><div class="cifra">16 → 18</div><p>sobre 20 en <a href="auditoria-ejemplo.html">mi propia web</a>, auditada con el mismo método y repetida tras los arreglos.</p></div>
     </div>
     <h2 style="font-size:1.25rem;margin:40px 0 16px">Y mis propios productos en producción</h2>
     <div class="grid4">
@@ -214,6 +217,7 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
       <details><summary>Ya tenemos equipo técnico. ¿Tiene sentido?</summary><p>Sí, y suele ir mejor. Trabajo con ellos en vuestros repositorios, y cuando me voy el sistema se queda con quien ya lo conoce.</p></details>
       <details><summary>No tenemos equipo técnico. ¿Quién lo mantiene después?</summary><p>Lo hablamos antes de empezar. Si no hay nadie que pueda mantenerlo, lo diseño lo más sencillo posible, con documentación y alertas claras, y acordamos quién atiende esas alertas.</p></details>
       <details><summary>¿Qué pasa con nuestros datos?</summary><p>Trabajo en tu infraestructura y con los accesos que me des. Decidimos juntos qué modelo se usa y dónde se ejecuta, y firmo un acuerdo de confidencialidad si hace falta.</p></details>
+      <details><summary>¿Qué pasa con nuestros accesos cuando terminamos?</summary><p>Trabajo con el mínimo acceso que necesito y con cuentas a mi nombre que puedes revocar, nunca con credenciales compartidas. Las claves viven en vuestro gestor de secretos, no en mi portátil ni en el código. Al terminar repasamos juntos los accesos, los retiráis y rotamos cualquier clave que haya visto, con una lista de comprobación por escrito. Firmo un acuerdo de confidencialidad y, si trato datos personales, el contrato de encargado de tratamiento.</p></details>
       <details><summary>¿Y si en realidad no necesitamos IA?</summary><p>Te lo digo en la primera llamada. Mejor perder un cliente que venderte algo que no te hace falta.</p></details>
     </div>
   </div></section>

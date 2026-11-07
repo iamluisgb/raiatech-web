@@ -11,59 +11,57 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <meta name="robots" content="noindex">
+<link rel="stylesheet" href="assets/raiatech.css">
 <style>
-  :root{--page:#fbfaf6;--bg:#fff;--ink:#252722;--muted:#6b6459;--line:#e8e0d1;--soft:#f6f2ea;--brand:#a3432b;--accent:#d17a43;--ok:#00744a;--bad:#b3123a;--mid:#8a5a12;--dato:#252722;--dato-n:#e3a06f;--dato-p:#d6c4a9;--display:"Space Grotesk",Inter,system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
-  @media (prefers-color-scheme:dark){:root{--page:#252722;--bg:#2e302b;--ink:#f2efe7;--muted:#d6c4a9;--line:#45463f;--soft:#383a34;--brand:#dc8b58;--accent:#d17a43;--ok:#3ddc97;--bad:#ff7a9a;--mid:#e3b25f;--dato:#1d1f1b}.tag,.cta{color:#252722!important}}
+  :root{--dato:#252722;--dato-n:#e3a06f;--dato-p:#d6c4a9}
+  @media (prefers-color-scheme:dark){:root{--dato:#1d1f1b}}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--page);color:var(--ink);font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-  .hoja{max-width:680px;margin:0 auto;background:var(--bg);min-height:100vh;box-shadow:0 1px 40px rgba(37,39,34,.08)}
+  body{margin:0;background:var(--bg);color:var(--on-bg);font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  .hoja{max-width:680px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 1px 40px rgba(37,39,34,.08)}
   header{padding:26px 24px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .logo{display:inline-flex;align-items:center;font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:17px}.logo .simbolo{width:13px;height:28px;margin-right:7px;fill:var(--accent)}
-  .logo span{color:var(--brand)}
-  .fecha{margin-left:auto;font-size:13px;color:var(--muted)}
+  .logo{font-size:17px}
+  .fecha{margin-left:auto;font-size:13px;color:var(--on-surface)}
   main{padding:30px 24px 40px}
   h1{font-family:var(--display);font-weight:700;font-size:clamp(24px,5.4vw,33px);line-height:1.14;letter-spacing:-.025em;margin:0 0 10px}
-  h1 em{font-style:normal;background:linear-gradient(transparent 62%, color-mix(in srgb,var(--accent) 45%, transparent) 0)}
-  .cliente{font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin:0 0 10px}
-  .sub{color:var(--muted);margin:0 0 26px;font-size:16px}
+  h1 em{font-style:normal;background:linear-gradient(transparent 62%, color-mix(in srgb,var(--ocre) 45%, transparent) 0)}
+  .cliente{font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--acento);margin:0 0 10px}
+  .sub{color:var(--on-surface);margin:0 0 26px;font-size:16px}
   .dato{background:var(--dato);color:#f2efe7;border-radius:16px;padding:26px 24px;margin:0 0 28px}
   .dato .n{font-size:52px;font-weight:800;line-height:1;letter-spacing:-.04em;color:var(--dato-n);display:block;margin-bottom:10px;font-family:var(--display)}
   .dato p{margin:0;color:var(--dato-p);font-size:16px}
   .dato b{color:#f2efe7}
-  h2{font:500 13px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--brand);margin:30px 0 14px}
+  h2{font:500 13px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--acento);margin:30px 0 14px}
   ul.lista{list-style:none;padding:0;margin:0}
   ul.lista li{padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
   ul.lista li:last-child{border-bottom:0}
   ul.lista b{font-weight:600}
-  ul.lista span{color:var(--muted);font-size:15px}
-  .tag{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;color:#fff}
-  ul.lista .tag{color:#fff;font-size:11.5px} .tag.ok{background:var(--ok)} .tag.bad{background:var(--bad)} .tag.mid{background:var(--mid)} .tag.neutral{background:#6b6459}
-  .veredicto{margin:0 0 24px;font-size:16.5px;color:var(--ink)}
+  ul.lista li>span:not(.estado){color:var(--on-surface);font-size:15px}
+  .veredicto{margin:0 0 24px;font-size:16.5px;color:var(--on-bg)}
   .scorecard{width:100%;border-collapse:collapse;margin:0 0 6px}
   .scorecard td{padding:9px 4px;border-bottom:1px solid var(--line);vertical-align:top}
   .scorecard td:first-child{font-weight:600;white-space:nowrap;padding-right:10px}
-  .scorecard td.n{font:500 15px var(--mono);color:var(--brand);white-space:nowrap;padding-right:10px}
-  .scorecard td.c{color:var(--muted);font-size:14.5px}
+  .scorecard td.n{font:500 15px var(--mono);color:var(--acento);white-space:nowrap;padding-right:10px}
+  .scorecard td.c{color:var(--on-surface);font-size:14.5px}
   .capturas{display:grid;grid-template-columns:1fr;gap:16px;margin:0}
   .capturas figure{margin:0}
   .capturas img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:12px;background:#fff}
-  .capturas figcaption{font-size:13px;color:var(--muted);margin-top:7px}
+  .capturas figcaption{font-size:13px;color:var(--on-surface);margin-top:7px}
   @media(min-width:560px){.capturas{grid-template-columns:1fr 1fr;align-items:start}}
   .quienes{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:0}
-  .quienes li{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14.5px}
-  .hacemos{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:26px 0 0}
+  .quienes li{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14.5px}
+  .hacemos{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:26px 0 0}
   .hacemos h3{margin:0 0 12px;font-size:17px;font-family:var(--display)}
-  .hacemos ol{margin:0;padding-left:20px;color:var(--muted)}
+  .hacemos ol{margin:0;padding-left:20px;color:var(--on-surface)}
   .hacemos ol li{margin-bottom:9px}
-  .hacemos ol b{color:var(--ink)}
+  .hacemos ol b{color:var(--on-bg)}
   .precio{display:flex;align-items:baseline;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
-  .precio .cifra{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-.03em;color:var(--brand);white-space:nowrap}
-  .precio span{color:var(--muted);font-size:14.5px}
-  .cta{display:block;background:var(--brand);color:#fff;text-align:center;font-weight:700;padding:18px;border-radius:14px;text-decoration:none;margin:28px 0 0;font-size:17px}
+  .precio .cifra{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-.03em;color:var(--acento);white-space:nowrap}
+  .precio span{color:var(--on-surface);font-size:14.5px}
+  .cta{display:block;background:var(--electric);color:var(--on-electric);text-align:center;font-weight:700;padding:18px;border-radius:14px;text-decoration:none;margin:28px 0 0;font-size:17px}
   .cta:hover{filter:brightness(1.08)}
-  .firma{margin-top:22px;font-size:15px;color:var(--muted)}
-  .aviso{margin-top:26px;padding:14px 16px;background:var(--soft);border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--muted)}
-  footer{padding:20px 24px 34px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px}
+  .firma{margin-top:22px;font-size:15px;color:var(--on-surface)}
+  .aviso{margin-top:26px;padding:14px 16px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--on-surface)}
+  footer{padding:20px 24px 34px;border-top:1px solid var(--line);font-size:13px;color:var(--on-surface);display:flex;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
@@ -105,42 +103,42 @@
     <h2>Lo que encontré</h2>
     <ul class="lista">
         <li>
-          <span class="tag bad">Falla</span>
+          <span class="estado malo">Falla</span>
           <b>Faltan cuatro cabeceras de seguridad</b>
           <span>No hay Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options ni Permissions-Policy. GitHub Pages no deja ponerlas y no se pueden fijar por meta: se resuelve con un CDN o proxy delante.</span>
         </li>
         <li>
-          <span class="tag mid">Mejorable</span>
+          <span class="estado mejorable">Mejorable</span>
           <b>Sin compresión brotli</b>
           <span>El HTML de 34 KB baja a 9 KB con gzip, pero el servidor ignora Accept-Encoding: br. Con 0,1 MB en total la ganancia es pequeña; la da el mismo CDN.</span>
         </li>
         <li>
-          <span class="tag mid">Mejorable</span>
+          <span class="estado mejorable">Mejorable</span>
           <b>El inglés no es indexable</b>
           <span>El conmutador ES/EN es i18n en cliente (data-i18n-html), sin URL propia: /en y /es dan 404. Google solo ve el español.</span>
         </li>
         <li>
-          <span class="tag mid">Mejorable</span>
+          <span class="estado mejorable">Mejorable</span>
           <b>La CSP va por meta</b>
           <span>Bloquea scripts de terceros y deja pasar solo el script del tema por su hash. Por meta no se puede usar frame-ancestors ni report-uri, así que la web se puede seguir incrustando en un iframe ajeno hasta que haya cabeceras.</span>
         </li>
         <li>
-          <span class="tag ok">Bien</span>
+          <span class="estado bien">Bien</span>
           <b>Imágenes ajustadas a su tamaño</b>
           <span>El avatar pasó de un PNG de 274 KB a un WebP de 4 KB. La og:image es propia, de 1200x630 y 59 KB. Las portadas de proyectos llevan srcset con una versión de 480 px. El peso total bajó de 0,36 MB a 0,1 MB en escritorio y 0,05 MB en móvil.</span>
         </li>
         <li>
-          <span class="tag ok">Bien</span>
+          <span class="estado bien">Bien</span>
           <b>Rendimiento sobresaliente</b>
           <span>LCP de 0,4–0,8 s en escritorio, 0,3–0,5 s en móvil y 1,0–1,2 s en 4G con CPU x4; CLS de 0,019 a 0,021; diez peticiones. Sin desbordamiento horizontal ni errores de consola.</span>
         </li>
         <li>
-          <span class="tag ok">Bien</span>
+          <span class="estado bien">Bien</span>
           <b>Estructura y accesibilidad correctas</b>
           <span>Un único H1, cuatro H2 y viewport que permite ampliar. Las imágenes llevan alt, width y height, y las portadas van en WebP y con carga diferida.</span>
         </li>
         <li>
-          <span class="tag ok">Bien</span>
+          <span class="estado bien">Bien</span>
           <b>SEO y entrega bien resueltos</b>
           <span>Título y descripción claros, canonical, og:image, schema Person y WebSite en @graph, robots.txt con una política por cada bot, sitemap.xml y /.well-known/security.txt que responden 200.</span>
         </li>

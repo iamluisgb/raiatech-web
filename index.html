@@ -63,9 +63,10 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
 .f-col h3{margin:0;font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
 #f-demo h3{color:var(--malo)}#f-prod h3{color:var(--acento)}
 .f-col ol{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:.88rem;color:var(--on-surface);line-height:1.4}
-.f-col li,.f-fin{opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s}.f-col li.on,.f-fin.on{opacity:1;transform:none}
+.f-col li,.f-fin,.f-cifra,.f-enlace{opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s}.f-col li.on,.f-fin.on,.f-cifra.on,.f-enlace.on{opacity:1;transform:none}
 .f-fin{margin-top:auto;font-weight:600;font-size:.88rem;padding:9px 11px;border-radius:7px;line-height:1.3}
 #f-demo .f-fin{color:var(--malo);background:color-mix(in srgb,var(--malo) 12%,transparent)}#f-prod .f-fin{color:var(--acento);background:color-mix(in srgb,var(--acento) 12%,transparent)}
+.f-cifra{margin:-4px 0 0;font:500 .76rem var(--mono);color:var(--on-bg)}.f-cta{margin:0;padding:10px 18px;border-top:1px solid var(--line);text-align:right}.f-enlace{font-size:.78rem;color:var(--on-surface);text-decoration:underline;text-underline-offset:3px}.f-enlace:hover{color:var(--acento)}
 .sim-pie{margin:0;padding:9px 18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--on-surface)}
 .score{display:grid;gap:7px;margin:6px 0 2px;padding:14px;border:1px solid var(--line);border-radius:8px;background:color-mix(in srgb,var(--bg) 50%,transparent)}
 .score div{display:grid;grid-template-columns:minmax(0,1fr) 72px 32px;gap:10px;align-items:center;font-size:.8rem;color:var(--on-surface)}
@@ -99,11 +100,12 @@ body{background-image:radial-gradient(color-mix(in srgb,var(--on-surface) 14%,tr
       <p class="nota">Te contesto yo, en menos de 48 horas.</p>
     </div>
     <div class="sim" id="fallos">
-      <div class="sim-top"><p>¿Qué pasa cuando algo falla?<small>Elige un fallo y compara.</small></p><div class="f-botones" role="group" aria-label="Elige un fallo"></div></div>
+      <div class="sim-top"><p>El mismo fallo, en dos sistemas<small>Elige un fallo y compara.</small></p><div class="f-botones" role="group" aria-label="Elige un fallo"></div></div>
       <div class="f-cols" aria-live="polite">
-        <div class="f-col" id="f-demo"><h3>En una demo</h3><ol></ol><div class="f-fin"></div></div>
-        <div class="f-col" id="f-prod"><h3>En producción</h3><ol></ol><div class="f-fin"></div></div>
+        <div class="f-col" id="f-demo"><h3>Sin preparar</h3><ol></ol><div class="f-fin"></div><p class="f-cifra"></p></div>
+        <div class="f-col" id="f-prod"><h3>Preparado</h3><ol></ol><div class="f-fin"></div><p class="f-cifra"></p></div>
       </div>
+      <p class="f-cta"><a class="f-enlace" href="#servicios"></a></p>
       <p class="sim-pie">Simulación para explicarlo: no son datos de ningún sistema.</p>
     </div>
   </div>

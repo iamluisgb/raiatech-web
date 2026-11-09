@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="robots" content="noindex">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Luis González Bernal · Informe</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Luis González Bernal · Informe</title>
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<meta name="robots" content="noindex">
 <script>(function(){var t;try{t=localStorage.getItem('tema')}catch(e){}document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')})()</script>
 <link rel="stylesheet" href="assets/raiatech.css">
 <style>
   :root{--dato:#252722;--dato-n:#e3a06f;--dato-p:#d6c4a9}
   :root[data-theme=dark]{--dato:#1d1f1b}
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--on-bg);font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  body{margin:0;background:var(--bg);color:var(--on-bg);font:17px/1.6 var(--font),system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
   .hoja{max-width:680px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 1px 40px rgba(37,39,34,.08)}
   header{padding:26px 24px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .logo{font-size:17px}
@@ -33,14 +32,32 @@
   .dato b{color:#f2efe7}
   h2{font:500 13px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--acento);margin:30px 0 14px}
   ul.lista{list-style:none;padding:0;margin:0}
-  ul.lista li{padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  ul.lista li{padding:16px 0;border-bottom:1px solid var(--line)}
   ul.lista li:last-child{border-bottom:0}
   ul.lista b{font-weight:600}
-  ul.lista li>span:not(.estado){color:var(--on-surface);font-size:15px}
+  .h-cab{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .h-neg{margin:6px 0 0;color:var(--on-surface);font-size:15.5px}
+  .h-tec{margin:6px 0 0;color:var(--on-surface);font:13px/1.55 var(--mono)}
+  .h-esf{margin:8px 0 0;font:400 13px/1.5 var(--mono);color:var(--on-bg)}
+  .h-esf::before{content:'Arreglo · ';color:var(--acento)}
+  .h-ev{margin-top:8px}
+  .h-ev summary{cursor:pointer;font-size:13.5px;color:var(--acento);width:max-content}
+  .h-ev pre{margin:8px 0 0;padding:12px 14px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;font:12.5px/1.55 var(--mono);color:var(--on-bg);white-space:pre-wrap;overflow-wrap:anywhere}
+  .ad{width:100%;border-collapse:collapse}
+  .ad th{font:500 12px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--on-surface);text-align:left;padding:0 6px 8px 0}
+  .ad td{padding:9px 6px 9px 0;border-top:1px solid var(--line);vertical-align:top;font-size:15px}
+  .ad td:first-child{font-weight:600}
+  .ad .antes{color:var(--on-surface)}
+  .ad .despues{font-weight:600;color:var(--on-bg)}
+  .ad-nota{margin:8px 0 0;font-size:13.5px;color:var(--on-surface)}
+  .scorecard s{display:block;color:var(--on-surface);font-size:13px;text-decoration-thickness:1px}
+  .scorecard td:first-child{min-width:7.5em}
+  .hacemos .esf{display:inline-block;font:500 12.5px var(--mono);color:var(--acento);white-space:nowrap}
+  .cta-nota{margin:10px 0 0;text-align:center;font-size:14px;color:var(--on-surface)}
   .veredicto{margin:0 0 24px;font-size:16.5px;color:var(--on-bg)}
   .scorecard{width:100%;border-collapse:collapse;margin:0 0 6px}
   .scorecard td{padding:9px 4px;border-bottom:1px solid var(--line);vertical-align:top}
-  .scorecard td:first-child{font-weight:600;white-space:nowrap;padding-right:10px}
+  .scorecard td:first-child{font-weight:600;padding-right:10px;overflow-wrap:anywhere}
   .scorecard td.n{font:500 15px var(--mono);color:var(--acento);white-space:nowrap;padding-right:10px}
   .scorecard td.c{color:var(--on-surface);font-size:14.5px}
   .capturas{display:grid;grid-template-columns:1fr;gap:16px;margin:0}
@@ -75,23 +92,33 @@
 
   <main>
     <p class="cliente">Luis González Bernal</p>
-    <h1>Rápida, ligera y con CSP; lo que falta ya solo lo da un CDN delante de GitHub Pages.</h1>
-    <p class="sub">Auditoría técnica de luisgonzalezbernal.com hecha a mano el 8 de octubre de 2026 y repetida tras aplicar los arreglos. Carga en medio segundo, pesa 0,1 MB y no salta.</p>
+    <h1>De 16,5 a 18 sobre 20 el mismo día. Lo que falta ya no está en el código: pide un CDN delante de GitHub Pages.</h1>
+    <p class="sub">Auditoría técnica de luisgonzalezbernal.com, mi web personal, el 8 de octubre de 2026: medí, arreglé y volví a medir con la misma herramienta. Es el paquete «Tu web o tu app».</p>
 
     <div class="dato">
-      <span class="n">18</span>
-      <p>puntos sobre 20 en la revisión de la web</p>
+      <span class="n">16,5 → 18</span>
+      <p>puntos sobre 20: la primera revisión y la repetición tras los arreglos</p>
     </div>
 
-    <p class="veredicto">Sitio personal estático en GitHub Pages, con un LCP de 0,3–0,5 s en móvil, CLS 0,02, diez peticiones y 0,1 MB en escritorio (0,05 MB en móvil). En la primera revisión pesaba 0,36 MB por una foto de 274 KB que se mostraba a 56 píxeles; ahora el avatar es un WebP de 4 KB y la imagen para compartir es aparte. Tiene CSP y Referrer-Policy por meta y security.txt. Lo que queda (HSTS, X-Frame-Options, X-Content-Type-Options, Permissions-Policy y brotli) no se puede poner en GitHub Pages: hace falta un CDN delante.</p>
+    <p class="veredicto">Ya era una web rápida, pero una sola foto pesaba tres cuartas partes de la página y el navegador no recibía ninguna instrucción de seguridad. Las dos cosas se arreglaron en el código. Lo que queda, cuatro cabeceras de seguridad y la compresión brotli, no se puede poner en GitHub Pages, donde está alojada: hace falta un CDN delante, y es el siguiente paso.</p>
     
-    <h2>Scorecard</h2>
+    <h2>Antes y después de los arreglos</h2>
+    <table class="ad"><thead><tr><th></th><th>Primera revisión</th><th>Tras los arreglos</th></tr></thead><tbody>
+      <tr><td>Nota</td><td class="antes">16,5/20</td><td class="despues">18/20</td></tr>
+      <tr><td>Peso de la portada</td><td class="antes">0,36 MB</td><td class="despues">0,1 MB</td></tr>
+      <tr><td>Foto del avatar</td><td class="antes">274 KB</td><td class="despues">4 KB</td></tr>
+      <tr><td>Protecciones de seguridad</td><td class="antes">0 de 6</td><td class="despues">2 de 6</td></tr>
+      <tr><td>security.txt</td><td class="antes">No</td><td class="despues">Sí</td></tr>
+    </tbody></table>
+    <p class="ad-nota">Las dos mediciones son del 8 de octubre de 2026, con la misma herramienta y en las mismas condiciones.</p>
+    
+    <h2>Nota por área</h2>
     <table class="scorecard"><tbody>
-      <tr><td>Rendimiento</td><td class="n">4/4</td><td class="c">LCP 0,3–1,0 s y CLS 0,02; 0,1 MB; solo falta brotli</td></tr>
+      <tr><td>Rendimiento</td><td class="n"><s>3,5/4</s> 4/4</td><td class="c">LCP 0,3–1,0 s y CLS 0,02; 0,1 MB; solo falta brotli</td></tr>
       <tr><td>Móvil y accesibilidad</td><td class="n">4/4</td><td class="c">Sin desbordes ni zoom bloqueado; imágenes con alt y dimensiones</td></tr>
       <tr><td>SEO y estructura</td><td class="n">3,5/4</td><td class="c">Person y WebSite en @graph; og:image de 1200x630; EN no indexable</td></tr>
-      <tr><td>Seguridad</td><td class="n">2,5/4</td><td class="c">CSP y Referrer-Policy por meta, security.txt; sin HSTS ni el resto de cabeceras</td></tr>
-      <tr><td>Higiene y UX</td><td class="n">4/4</td><td class="c">Sin señales de código sin revisar ni errores de consola; Umami sin cookies</td></tr>
+      <tr><td>Seguridad</td><td class="n"><s>2/4</s> 2,5/4</td><td class="c">CSP y Referrer-Policy por meta, security.txt; sin HSTS ni el resto de cabeceras</td></tr>
+      <tr><td>Higiene y UX</td><td class="n"><s>3,5/4</s> 4/4</td><td class="c">Sin señales de código sin revisar ni errores de consola; Umami sin cookies</td></tr>
     </tbody></table>
     
     <h2>Cómo se ve</h2>
@@ -104,44 +131,64 @@
     <h2>Lo que encontré</h2>
     <ul class="lista">
         <li>
-          <span class="estado malo">Falla</span>
-          <b>Faltan cuatro cabeceras de seguridad</b>
-          <span>No hay Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options ni Permissions-Policy. GitHub Pages no deja ponerlas y no se pueden fijar por meta: se resuelve con un CDN o proxy delante.</span>
+          <div class="h-cab"><span class="estado malo">Falla</span><b>Faltan cuatro protecciones de seguridad</b></div>
+          <p class="h-neg">Otra web puede cargar esta dentro de un marco y poner encima un botón falso, y el navegador no tiene la orden de ir siempre por HTTPS. En una web personal el riesgo es bajo; en una tienda o un área de clientes es lo primero que arreglaría.</p><p class="h-tec">Faltan Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options y Permissions-Policy. GitHub Pages no deja ponerlas y por meta no funcionan.</p>
+          <p class="h-esf">1–2 horas con acceso al DNS: Cloudflare delante y una regla de cabeceras</p>
+          <details class="h-ev"><summary>Ver la prueba</summary><pre>Medición del 8 oct, tras los arreglos (auditor/capturar.mjs):
+"seguridad": {
+  "HSTS": null,
+  "CSP": "(meta) default-src 'self'; script-src 'self' 'sha256-…'",
+  "X-Frame-Options": null,
+  "X-Content-Type-Options": null,
+  "Referrer-Policy": "(meta) strict-origin-when-cross-origin",
+  "Permissions-Policy": null
+}
+$ curl -sI https://luisgonzalezbernal.com/ | grep -i server
+server: GitHub.com</pre></details>
         </li>
         <li>
-          <span class="estado mejorable">Mejorable</span>
-          <b>Sin compresión brotli</b>
-          <span>El HTML de 34 KB baja a 9 KB con gzip, pero el servidor ignora Accept-Encoding: br. Con 0,1 MB en total la ganancia es pequeña; la da el mismo CDN.</span>
+          <div class="h-cab"><span class="estado mejorable">Mejorable</span><b>Sin compresión brotli</b></div>
+          <p class="h-neg">La página viaja algo más pesada de lo necesario. Aquí son pocos KB y no se nota; en una web pesada, sí.</p><p class="h-tec">El HTML de 34 KB baja a 9 KB con gzip, pero el servidor ignora Accept-Encoding: br.</p>
+          <p class="h-esf">Incluido en el punto anterior: lo da el mismo CDN</p>
+          <details class="h-ev"><summary>Ver la prueba</summary><pre>"peso": { "planoKB": 34, "gzipKB": 9, "brKB": 34 },
+"brotli": false</pre></details>
         </li>
         <li>
-          <span class="estado mejorable">Mejorable</span>
-          <b>El inglés no es indexable</b>
-          <span>El conmutador ES/EN es i18n en cliente (data-i18n-html), sin URL propia: /en y /es dan 404. Google solo ve el español.</span>
+          <div class="h-cab"><span class="estado mejorable">Mejorable</span><b>La versión en inglés no existe para Google</b></div>
+          <p class="h-neg">Quien busca en inglés no encuentra la web: Google solo ve la versión en español.</p><p class="h-tec">El conmutador ES/EN traduce en el navegador (data-i18n-html), sin URL propia: /en y /es dan 404.</p>
+          <p class="h-esf">1–2 días: páginas /en con su URL y hreflang</p>
+          <details class="h-ev"><summary>Ver la prueba</summary><pre>$ curl -s -o /dev/null -w "%{http_code}" https://luisgonzalezbernal.com/en
+404</pre></details>
         </li>
         <li>
-          <span class="estado mejorable">Mejorable</span>
-          <b>La CSP va por meta</b>
-          <span>Bloquea scripts de terceros y deja pasar solo el script del tema por su hash. Por meta no se puede usar frame-ancestors ni report-uri, así que la web se puede seguir incrustando en un iframe ajeno hasta que haya cabeceras.</span>
+          <div class="h-cab"><span class="estado mejorable">Mejorable</span><b>La protección contra scripts ajenos está a medias</b></div>
+          <p class="h-neg">Ya impide que se ejecute código de terceros, pero no puede impedir que otra web la incruste: eso solo se puede pedir desde el servidor.</p><p class="h-tec">La CSP va por meta: bloquea scripts ajenos y deja pasar solo el del tema por su hash, pero por meta no se puede usar frame-ancestors ni report-uri.</p>
+          <p class="h-esf">30 minutos, una vez esté el CDN</p>
+          
         </li>
         <li>
-          <span class="estado bien">Bien</span>
-          <b>Imágenes ajustadas a su tamaño</b>
-          <span>El avatar pasó de un PNG de 274 KB a un WebP de 4 KB. La og:image es propia, de 1200x630 y 59 KB. Las portadas de proyectos llevan srcset con una versión de 480 px. El peso total bajó de 0,36 MB a 0,1 MB en escritorio y 0,05 MB en móvil.</span>
+          <div class="h-cab"><span class="estado bien">Arreglado</span><b>Una foto pesaba más que todo lo demás junto</b></div>
+          <p class="h-neg">Una imagen de 274 KB se mostraba a 56 píxeles: era el 76 % del peso de la portada. Ahora la portada entera pesa 0,1 MB, menos de un tercio que antes.</p><p class="h-tec">me-web.png (478x512, 273.928 bytes) hacía de avatar y de og:image. Ahora son dos: avatar WebP de 4 KB y og:image de 1200x630 y 59 KB. Las portadas de proyectos llevan srcset.</p>
+          
+          
         </li>
         <li>
-          <span class="estado bien">Bien</span>
-          <b>Rendimiento sobresaliente</b>
-          <span>LCP de 0,4–0,8 s en escritorio, 0,3–0,5 s en móvil y 1,0–1,2 s en 4G con CPU x4; CLS de 0,019 a 0,021; diez peticiones. Sin desbordamiento horizontal ni errores de consola.</span>
+          <div class="h-cab"><span class="estado bien">Arreglado</span><b>El navegador no recibía ninguna instrucción de seguridad</b></div>
+          <p class="h-neg">Ahora solo ejecuta los scripts de la propia web y no le cuenta a otras webs de dónde viene el visitante. Hay también una dirección publicada para avisar de fallos de seguridad.</p><p class="h-tec">CSP y Referrer-Policy por meta, y /.well-known/security.txt. El schema suma WebSite al Person.</p>
+          
+          
         </li>
         <li>
-          <span class="estado bien">Bien</span>
-          <b>Estructura y accesibilidad correctas</b>
-          <span>Un único H1, cuatro H2 y viewport que permite ampliar. Las imágenes llevan alt, width y height, y las portadas van en WebP y con carga diferida.</span>
+          <div class="h-cab"><span class="estado bien">Bien</span><b>Rápida en cualquier móvil</b></div>
+          <p class="h-neg">Se ve entera en medio segundo en un móvil y en un segundo con 4G y un teléfono lento. Nada se mueve mientras carga.</p><p class="h-tec">LCP de 0,4–0,8 s en escritorio, 0,3–0,5 s en móvil y 1,0–1,2 s en 4G con CPU x4; CLS de 0,019 a 0,021; diez peticiones. Sin desbordamiento horizontal ni errores de consola.</p>
+          
+          
         </li>
         <li>
-          <span class="estado bien">Bien</span>
-          <b>SEO y entrega bien resueltos</b>
-          <span>Título y descripción claros, canonical, og:image, schema Person y WebSite en @graph, robots.txt con una política por cada bot, sitemap.xml y /.well-known/security.txt que responden 200.</span>
+          <div class="h-cab"><span class="estado bien">Bien</span><b>Bien construida para personas y buscadores</b></div>
+          <p class="h-neg">Se puede ampliar en el móvil, las imágenes se describen para quien no las ve y Google entiende quién es la persona y de qué trata la web.</p><p class="h-tec">Un único H1, cuatro H2, viewport que permite ampliar, alt y dimensiones en las imágenes. Canonical, og:image, schema Person y WebSite, robots.txt con una política por bot y sitemap.xml.</p>
+          
+          
         </li>
     </ul>
     
@@ -149,14 +196,15 @@
     <div class="hacemos">
       <h3>Qué haría yo</h3>
       <ol>
-        <li><b>Poner Cloudflare delante</b> cuando los DNS estén allí: HSTS, X-Frame-Options, X-Content-Type-Options, Permissions-Policy, brotli y HTTP/3 sin tocar GitHub Pages. La nube naranja se activa con el certificado ya emitido y SSL en modo Full.</li>
-        <li><b>Con las cabeceras puestas</b>, pasar la CSP a cabecera y añadir frame-ancestors.</li>
-        <li><b>Opcional:</b> una versión /en real con hreflang si se quiere posicionar en inglés.</li>
+        <li><b>Poner Cloudflare delante</b> de GitHub Pages: las cuatro cabeceras, brotli y HTTP/3 sin tocar el código. <span class="esf">1–2 h</span></li>
+        <li><b>Con las cabeceras puestas</b>, pasar la CSP a cabecera y añadir frame-ancestors. <span class="esf">30 min</span></li>
+        <li><b>Opcional:</b> una versión /en real con hreflang, si se quiere posicionar en inglés. <span class="esf">1–2 días</span></li>
       </ol>
       
     </div>
 
-    <a class="cta" href="mailto:hola@raiatech.com?subject=luisgonzalezbernal.com%20-%20revision%20de%20la%20web">¿Lo comentamos?</a>
+    <a class="cta" href="mailto:hola@raiatech.com?subject=Auditor%C3%ADa%20de%20mi%20web">Quiero esto para mi web</a>
+    <p class="cta-nota">Paquete «Tu web o tu app»: 3–5 días y precio cerrado antes de empezar.</p>
 
     <div class="firma">
       <b>Luis González · Raiatech</b><br>
@@ -164,7 +212,7 @@
     </div>
 
     
-    <div class="aviso">Análisis técnico interno sobre las páginas públicas de luisgonzalezbernal.com el 8 de octubre de 2026, repetido tras los arreglos.</div>
+    <div class="aviso">Análisis técnico de las páginas públicas de luisgonzalezbernal.com el 8 de octubre de 2026, repetido tras los arreglos. Los tiempos de arreglo son estimaciones.</div>
   </main>
 
   <footer>

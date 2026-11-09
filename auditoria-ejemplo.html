@@ -11,10 +11,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <meta name="robots" content="noindex">
+<script>(function(){var t;try{t=localStorage.getItem('tema')}catch(e){}document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')})()</script>
 <link rel="stylesheet" href="assets/raiatech.css">
 <style>
   :root{--dato:#252722;--dato-n:#e3a06f;--dato-p:#d6c4a9}
-  @media (prefers-color-scheme:dark){:root{--dato:#1d1f1b}}
+  :root[data-theme=dark]{--dato:#1d1f1b}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--on-bg);font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
   .hoja{max-width:680px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 1px 40px rgba(37,39,34,.08)}
@@ -172,5 +173,6 @@
   </footer>
 
 </div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
 <link rel="canonical" href="https://raiatech.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Raiatech", "url": "https://raiatech.com/", "email": "hola@raiatech.com", "areaServed": "ES", "founder": {"@type": "Person", "name": "Luis González Bernal", "url": "https://luisgonzalezbernal.com/"}, "description": "Auditorías técnicas de software (webs, apps, APIs, datos y sistemas con IA), e ingeniero integrado en tu equipo para llevar sistemas con IA a producción."}</script>
+<script>(function(){var t;try{t=localStorage.getItem('tema')}catch(e){}document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')})()</script>
 <link rel="stylesheet" href="assets/raiatech.css">
 <style>
 .hero{padding:88px 0 72px;max-width:760px}
@@ -17,26 +18,40 @@ h1{font-family:var(--display);font-size:clamp(2.1rem,5.4vw,3.4rem);line-height:1
 .hero .sub{font-size:1.12rem;color:var(--on-surface);margin:0 0 28px;max-width:60ch}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .nota{margin:20px 0 0;font-size:.88rem;color:var(--on-surface)}
-section{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:64px}
-h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;letter-spacing:-.02em;margin:8px 0 12px;font-weight:500}
+section{padding:96px 0;border-top:1px solid var(--line);scroll-margin-top:64px}
+h2{font-family:var(--display);font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.15;letter-spacing:-.02em;margin:8px 0 12px;font-weight:500}
 .intro{color:var(--on-surface);margin:0 0 32px;max-width:62ch}
 .grid2{display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
 .grid3{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
 .grid4{display:grid;gap:16px;grid-template-columns:repeat(4,minmax(0,1fr))}
 .pasos{list-style:none;margin:0;padding:0;counter-reset:p}
 .pasos li{counter-increment:p}
-.pasos .card::before{content:'0' counter(p);font-family:var(--mono);font-size:.78rem;color:var(--acento)}
+.pasos li{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:18px}
+.pasos li::before{content:'0' counter(p);font-family:var(--mono);font-size:.78rem;color:var(--acento)}
+.pasos h3,.col h3{margin:0;font-family:var(--display);font-size:1.2rem;font-weight:500;letter-spacing:-.01em}
+.pasos p{margin:0;font-size:.94rem;color:var(--on-surface)}
+.col{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:10px}
+.col ul{margin:4px 0 0;padding-left:18px;font-size:.94rem;color:var(--on-surface);display:grid;gap:8px}
+.col .pie{margin-top:auto;padding-top:10px;font-size:.94rem;color:var(--on-surface)}
+.col a,.dato a{color:var(--acento)}
+.dato{border-top:1px solid var(--line);padding-top:18px}
+.dato p{margin:8px 0 0;font-size:.94rem;color:var(--on-surface)}
+.cabeza{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:center;margin-bottom:48px}
+.cabeza .intro{margin-bottom:0}
+.cabeza .dibujo{max-width:400px;justify-self:end}
 .cifra{font-family:var(--display);font-size:2rem;font-weight:500;letter-spacing:-.02em;line-height:1.1;color:var(--on-bg)}
-.cierre{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:36px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
-.cierre h2{margin-top:0}
-.cierre p{color:var(--on-surface);margin:0}
-.ops{display:grid;gap:10px}
+.cierre{display:grid;gap:36px}
+.cierre h2{margin:8px 0 16px;font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.035em;font-weight:700;max-width:16ch}
+.cierre p{color:var(--on-surface);margin:0;max-width:56ch}
+.correo{display:inline-block;margin-top:20px;font-family:var(--display);font-size:clamp(1.4rem,3.4vw,2.2rem);font-weight:500;letter-spacing:-.02em;color:var(--acento);text-decoration:none;border-bottom:1px solid currentColor;line-height:1.3}
+.correo:hover{border-bottom-width:2px}
+.ops{display:grid;gap:10px;grid-template-columns:repeat(4,minmax(0,1fr))}
 .op{display:flex;justify-content:space-between;gap:14px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:13px 16px;text-decoration:none;font-weight:600;font-size:.95rem}
 .op:hover{border-color:var(--acento)}
 .op::after{content:'→';font-family:var(--mono);color:var(--acento)}
 .hero-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:48px;align-items:center;padding-block:64px 72px}
 .hero-g .hero{padding:0;max-width:none}
-.hero-g h1{font-size:clamp(2rem,4.2vw,3rem)}
+.hero-g h1{font-size:clamp(2.2rem,4.8vw,3.5rem)}
 .quien{display:flex;align-items:center;gap:12px;margin-bottom:6px}
 .quien img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--surface-2)}
 .quien b{display:block;font-size:.95rem;line-height:1.3}
@@ -82,6 +97,7 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
 .yo p{margin:0 0 14px;color:var(--on-surface);max-width:64ch}
 .yo strong{color:var(--on-bg);font-weight:600}
 .yo a{color:var(--acento)}
+.pie-marca{display:flex;align-items:center;gap:12px}
 .faq{display:grid;gap:8px;max-width:760px}
 .faq details{background:var(--surface);border:1px solid var(--line);border-radius:8px}
 .faq summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:.96rem}
@@ -90,7 +106,9 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
 @media (max-width:640px){.yo{grid-template-columns:1fr}.yo img{width:140px}}
 @media (max-width:480px){.f-cols{grid-template-columns:1fr;min-height:0}.f-col{min-height:230px}.f-col+.f-col{border-left:0;border-top:1px solid var(--line)}}
 @media (prefers-reduced-motion:reduce){.f-col li,.f-fin{transition:none}}
-@media (max-width:860px){.grid3,.grid4,.grid2,.cierre{grid-template-columns:1fr}.grid4.num{grid-template-columns:1fr 1fr}.hero{padding:56px 0 48px}.cierre{padding:24px}}
+@media (max-width:980px){.ops{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.grid3,.grid4,.grid2,.ops{grid-template-columns:1fr}.hero{padding:56px 0 48px}section{padding:64px 0}.cabeza{grid-template-columns:1fr;gap:28px}.cabeza .dibujo{justify-self:start;max-width:340px}.pasos.grid4{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.pasos.grid4{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -119,9 +137,25 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
   </div>
 
   <section id="servicios"><div class="wrap">
-    <p class="label">Servicios</p>
+    <div class="cabeza"><div>
+    <p class="label"><span class="n">01</span> / Servicios</p>
     <h2>Tres formas de empezar</h2>
     <p class="intro">Si aún no sabes qué falla, empieza por la auditoría. Si ya sabes qué quieres construir, pasa directamente al trabajo en equipo. Y si lo que necesitas es que tu equipo sepa hacerlo, empieza por la formación.</p>
+    </div>
+<svg class="dibujo" viewBox="0 0 320 230" role="img" aria-label="Dibujo: un tronco, tu sistema, con tres ramas: auditoría, equipo y formación">
+<ellipse class="t" cx="160" cy="22" rx="13" ry="8"/>
+<path class="t" d="M160 34 V200"/>
+<path class="t fino" d="M160 70 C190 64 220 64 248 70 M160 120 C130 114 100 114 72 120 M160 168 C190 162 220 162 248 168"/>
+<path class="t" d="M160 70 C130 64 100 62 66 70 M160 120 C190 114 220 112 254 120 M160 168 C130 162 100 160 66 168"/>
+<path class="t ac" d="M160 168 C130 162 100 160 66 168"/>
+<circle class="pt" cx="66" cy="70" r="3.5"/><circle class="pt" cx="254" cy="120" r="3.5"/><circle class="pt ac" cx="66" cy="168" r="3.5"/>
+<text x="66" y="56" text-anchor="start">03 FORMACIÓN</text>
+<text x="254" y="106" text-anchor="end">02 EQUIPO</text>
+<text x="66" y="154" text-anchor="start" class="ac">01 AUDITORÍA</text>
+<path class="t guia" d="M110 214 H210"/>
+<text x="160" y="228" text-anchor="middle">TU SISTEMA</text>
+</svg>
+    </div>
     <div class="grid2">
       <div class="card">
         <h3>Auditoría técnica</h3>
@@ -158,18 +192,18 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
   </div></section>
 
   <section id="para"><div class="wrap">
-    <p class="label">Para quién</p>
+    <p class="label"><span class="n">02</span> / Para quién</p>
     <h2>¿Te suena alguno de estos casos?</h2>
     <div class="grid3" style="margin-top:24px">
-      <div class="card">
+      <div class="col">
         <h3>Empresas de software</h3>
         <ul><li>Tienes un prototipo de IA que luce en la demo y nadie se atreve a poner en producción</li><li>Tu equipo está volcado en el producto y el proyecto de IA nunca empieza</li><li>Algo falla de vez en cuando y os enteráis por los clientes</li></ul>
       </div>
-      <div class="card">
+      <div class="col">
         <h3>Pymes sin equipo técnico</h3>
         <ul><li>Alguien copia datos de un sitio a otro todos los días, a mano</li><li>Probasteis una herramienta de IA y se quedó en una prueba</li><li>Te han hecho un presupuesto, una web o una aplicación y no sabes si son buenos</li></ul>
       </div>
-      <div class="card">
+      <div class="col">
         <h3>Empresas que ya usan ChatGPT</h3>
         <ul><li>Cada uno lo usa a su manera, y nadie sabe qué datos de clientes acaban ahí</li><li>Repetís la misma tarea en el chat todos los días: resumir, redactar, clasificar</li><li>La ley europea de IA os pide formar al equipo en su uso y no sabéis por dónde empezar</li></ul>
         <p class="pie">Un <a href="#formacion">taller para el equipo</a> y un día de diagnóstico para elegir qué automatizar, a precio cerrado.</p>
@@ -178,24 +212,34 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
   </div></section>
 
   <section id="como"><div class="wrap">
-    <p class="label">Cómo trabajo</p>
+    <div class="cabeza"><div>
+    <p class="label"><span class="n">03</span> / Cómo trabajo</p>
     <h2>Sabes qué vas a recibir antes de pagar</h2>
-    <ol class="pasos grid4" style="margin-top:24px">
-      <li class="card"><h3>Hablamos</h3><p>30 minutos, sin coste. Si no soy la persona adecuada, te lo digo.</p></li>
-      <li class="card"><h3>Alcance por escrito</h3><p>Objetivo que se pueda medir y precio por escrito: cerrado en la auditoría, por jornada en el trabajo en equipo.</p></li>
-      <li class="card"><h3>Construimos</h3><p>En tus repositorios y a la vista. Cada semana ves algo funcionando.</p></li>
-      <li class="card"><h3>Te lo quedas</h3><p>Código, documentación y alertas son tuyos, y tu equipo sabe llevarlos.</p></li>
+    </div>
+<svg class="dibujo" viewBox="0 0 320 180" role="img" aria-label="Dibujo: una señal con mucho ruido al principio que se estabiliza a lo largo de los cuatro pasos">
+<text x="10" y="14" text-anchor="start">DEMO</text><text x="310" y="14" text-anchor="end" class="ac">PRODUCCIÓN</text>
+<path class="t fino guia" d="M10 72 H310"/>
+<path class="t" d="M10 72.0 L13 85.7 L16 95.6 L19 111.8 L22 109.3 L25 99.5 L28 81.1 L31 69.9 L34 60.0 L37 45.5 L40 42.2 L43 45.2 L46 59.0 L49 66.8 L52 75.1 L55 86.4 L58 92.7 L61 94.2 L64 85.4 L67 80.7 L70 74.6 L73 67.1 L76 60.1 L79 56.1 L82 60.5 L85 62.6 L88 66.3 L91 70.5 L94 76.8 L97 81.7 L100 80.5 L103 80.4 L106 78.6 L109 77.1 L112 72.2 L115 67.6 L118 66.6 L121 65.5 L124 65.9 L127 65.5 L130 68.9 L133 72.6 L136 74.7 L139 76.3 L142 76.9 L145 78.3 L148 76.4 L151 73.8 L154 71.3 L157 69.7 L160 68.7 L163 66.8 L166 67.5 L169 69.0 L172 71.3 L175 72.8 L178 73.9 L181 75.7 L184 75.8 L187 75.2 L190 73.4 L193 72.3 L196 71.2 L199 69.8 L202 69.2 L205 69.2 L208 70.4 L211 71.1 L214 71.9 L217 73.0 L220 73.8 L223 74.1 L226 73.4 L229 73.1 L232 72.5 L235 71.9 L238 71.1 L241 70.6 L244 70.9 L247 71.0 L250 71.3 L253 71.6 L256 72.2 L259 72.8 L262 72.8 L265 72.8 L268 72.7 L271 72.7 L274 72.2 L277 71.8 L280 71.6 L283 71.4 L286 71.4 L289 71.3 L292 71.5 L295 71.9 L298 72.2 L301 72.4 L304 72.5 L307 72.7 L310 72.5"/>
+<path class="t fino" d="M10 150 H310"/>
+<circle class="pt" cx="40" cy="150" r="3.5"/><text x="40" y="170" text-anchor="middle">01</text><circle class="pt" cx="120" cy="150" r="3.5"/><text x="120" y="170" text-anchor="middle">02</text><circle class="pt" cx="200" cy="150" r="3.5"/><text x="200" y="170" text-anchor="middle">03</text><circle class="pt ac" cx="280" cy="150" r="3.5"/><text x="280" y="170" text-anchor="middle" class="ac">04</text>
+</svg>
+    </div>
+    <ol class="pasos grid4">
+      <li><h3>Hablamos</h3><p>30 minutos, sin coste. Si no soy la persona adecuada, te lo digo.</p></li>
+      <li><h3>Alcance por escrito</h3><p>Objetivo que se pueda medir y precio por escrito: cerrado en la auditoría, por jornada en el trabajo en equipo.</p></li>
+      <li><h3>Construimos</h3><p>En tus repositorios y a la vista. Cada semana ves algo funcionando.</p></li>
+      <li><h3>Te lo quedas</h3><p>Código, documentación y alertas son tuyos, y tu equipo sabe llevarlos.</p></li>
     </ol>
   </div></section>
 
   <section id="pruebas"><div class="wrap">
-    <p class="label">Pruebas</p>
+    <p class="label"><span class="n">04</span> / Pruebas</p>
     <h2>Lo que he hecho, con números</h2>
     <p class="intro">Casos reales, sin nombres de clientes por confidencialidad, y productos que puedes abrir ahora mismo.</p>
     <div class="grid3 num">
-      <div class="card"><p class="caso">Farmacéutica global · SRE</p><div class="cifra">99,97 %</div><p>de disponibilidad en una plataforma de automatización con unas 3.000 tareas al día.</p></div>
-      <div class="card"><p class="caso">Farmacéutica global · IA para operaciones</p><div class="cifra">−90 %</div><p>de tiempo para asignar incidentes: un clasificador propio sobre ServiceNow manda cada incidente al equipo que debe resolverlo.</p></div>
-      <div class="card"><p class="caso">Raiatech · auditoría web</p><div class="cifra">16 → 18</div><p>sobre 20 en <a href="auditoria-ejemplo.html">mi propia web</a>, auditada con el mismo método y repetida tras los arreglos.</p></div>
+      <div class="dato"><p class="caso">Farmacéutica global · SRE</p><div class="cifra">99,97 %</div><p>de disponibilidad en una plataforma de automatización con unas 3.000 tareas al día.</p></div>
+      <div class="dato"><p class="caso">Farmacéutica global · IA para operaciones</p><div class="cifra">−90 %</div><p>de tiempo para asignar incidentes: un clasificador propio sobre ServiceNow manda cada incidente al equipo que debe resolverlo.</p></div>
+      <div class="dato"><p class="caso">Raiatech · auditoría web</p><div class="cifra">16 → 18</div><p>sobre 20 en <a href="auditoria-ejemplo.html">mi propia web</a>, auditada con el mismo método y repetida tras los arreglos.</p></div>
     </div>
     <h2 style="font-size:1.25rem;margin:40px 0 16px">Y mis propios productos en producción</h2>
     <div class="grid4">
@@ -208,7 +252,7 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
   </div></section>
 
   <section id="yo"><div class="wrap">
-    <p class="label">Quién hay detrás</p>
+    <p class="label"><span class="n">05</span> / Quién hay detrás</p>
     <h2>Raiatech soy yo</h2>
     <div class="yo" style="margin-top:24px">
       <img src="images/luis-360.webp" alt="Retrato de Luis González" width="360" height="360" loading="lazy">
@@ -222,7 +266,7 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
   </div></section>
 
   <section id="dudas"><div class="wrap">
-    <p class="label">Dudas</p>
+    <p class="label"><span class="n">06</span> / Dudas</p>
     <h2>Lo que me suelen preguntar</h2>
     <div class="faq" style="margin-top:24px">
       <details><summary>¿Cuánto cuesta?</summary><p>Depende del alcance, así que no te doy una cifra a ciegas. La auditoría tiene precio cerrado y el trabajo en equipo se paga por jornada. Tras la primera llamada te mando el precio por escrito en 24 horas, y decides con él delante.</p></details>
@@ -234,8 +278,8 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
     </div>
   </div></section>
 
-  <section id="contacto" style="border-top:0;padding-top:0"><div class="wrap"><div class="cierre">
-    <div><p class="label">Contacto</p><h2>Cuéntame en dos líneas qué necesitas</h2><p>Trabajo en remoto. Te contesto en menos de 48 horas, y firmo un acuerdo de confidencialidad si hace falta.</p><p style="margin-top:12px"><a href="mailto:hola@raiatech.com">hola@raiatech.com</a></p></div>
+  <section id="contacto"><div class="wrap"><div class="cierre">
+    <div><p class="label"><span class="n">07</span> / Contacto</p><h2>¿Qué construimos?</h2><p>Cuéntame en dos líneas qué necesitas. Trabajo en remoto, te contesto en menos de 48 horas y firmo un acuerdo de confidencialidad si hace falta.</p><a class="correo" href="mailto:hola@raiatech.com">hola@raiatech.com</a></div>
     <div class="ops">
       <a class="op" href="mailto:hola@raiatech.com?subject=Auditor%C3%ADa%20t%C3%A9cnica">Quiero una auditoría</a>
       <a class="op" href="mailto:hola@raiatech.com?subject=Ingeniero%20en%20mi%20equipo">Quiero un ingeniero en mi equipo</a>
@@ -244,7 +288,8 @@ h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;
     </div>
   </div></div></section>
 </main>
-<footer><div class="wrap"><div>© 2026 Raiatech · España</div><div class="links"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="mailto:hola@raiatech.com">hola@raiatech.com</a></div></div></footer>
+<footer><div class="wrap"><div class="pie-marca"><svg class="firma" viewBox="28 46 317 704" aria-hidden="true"><path d="M 189.1 65 C 175.3 71.3,159 85.6,159 91.5 C 159 106.1,199.5 102.9,209.9 87.5 C 219.6 73.2,205.3 57.7,189.1 65 M 179 149.6 C 177.6 149.9,172.4 151.5,167.3 153.2 C 158.2 156.4,158.2 156.4,151.7 153.1 C 141.5 147.9,132 148.6,125.5 155 C 121 159.5,120.8 159.5,115.2 159 C 86.3 156.6,58.4 160.8,52.1 168.3 C 50.9 169.9,44.5 184.5,43 189.2 C 39.5 200.5,55.9 205.1,100 205.2 C 123.7 205.3,122.3 204.1,125.6 227.9 C 127.7 243.6,127.4 244.5,118.1 247.9 C 107 251.9,101.8 263.9,106.9 273.9 C 109.1 278.1,119.4 287.6,128.4 293.5 C 134.8 297.7,136.8 300.9,135.7 305.2 C 134.5 309.9,131.7 310.3,101.5 310.5 C 66.6 310.7,61.1 312,58 321.5 C 54.9 330.8,60.9 337.2,78.7 343.8 C 112.8 356.5,108.7 355.5,126.2 355.5 C 145.1 355.5,144.5 355.2,146.5 367.6 C 149.8 387.4,149.2 388.4,132.5 389.3 C 126.7 389.7,121.8 390.8,114.5 393.4 C 109 395.4,99 398.4,92.2 400 C 66.5 406.2,63.1 413.3,80.3 424.7 C 91.5 432.2,97.5 433.7,127.2 436.4 C 158.3 439.1,158.9 439.5,159.2 454 C 159.4 463.7,156.1 464.9,127 465 C 100.1 465,92.8 467.1,84.7 477.2 C 76.4 487.5,80.5 494.7,99.5 503.2 C 130 517,133.3 517.4,157.6 509.9 C 165.6 507.5,171.2 512.7,167.8 519.7 C 166.3 522.8,168.1 522.6,144 522 C 126.4 521.5,102.7 527.2,97.4 533.1 C 95.2 535.5,91 550,91 555.1 C 91 564.7,106.6 568.1,150.2 567.9 C 177.5 567.9,176.5 567.3,179 583 C 181.6 599.6,180.1 602,168.5 600 C 148.4 596.6,110.8 603.5,103.7 612 C 100.4 615.9,98.2 634.5,100.4 638.9 C 104.5 646.7,117.2 648.6,155.5 647.2 C 190.4 645.9,188.4 645,191 663.1 C 193 677.3,191.9 678.3,175.2 677.4 C 159.7 676.5,152.1 677.9,143.7 683.1 C 140.3 685.3,133.4 689,128.3 691.4 C 109.1 700.6,113.2 707.3,143.7 716.4 C 160.7 721.5,167.9 722.4,186.9 721.7 C 206 721,207 721.3,215.4 728.9 C 224.3 737,227.7 737.3,233.9 730.6 C 237 727.3,241.7 726,250.5 726 C 279.2 726,300 721.5,313.5 712.5 C 331.6 700.5,329.5 692.5,306.6 686.3 C 301.6 685,293.2 682.2,287.9 680.1 C 274.6 674.7,268.5 673.6,256.4 674.3 C 242.5 675.2,240 672.9,240 659.3 C 240 650.6,240.6 650.4,268.2 649.7 C 294.4 649.1,299.5 648.2,312.6 642.1 C 332.9 632.5,331.1 624.6,307.1 618.5 C 301.4 617.1,292.1 614.1,286.3 611.9 C 270.6 606,264.8 604.9,249.6 605.1 C 231.9 605.3,231 604.7,229.4 591.2 C 228.5 583,230.1 581.4,240.8 579.5 C 284.7 571.9,301.5 565.1,307.4 552.6 C 312.8 541.2,305.3 536,280.1 533.5 C 272.1 532.6,261.8 531,257.1 529.9 C 252.1 528.7,243.2 527.5,235.8 527.1 C 222.2 526.5,220.7 525.9,219.5 520.9 C 218 514.8,220.8 513.7,239.7 512.8 C 258.9 512,265.8 510.7,280.4 505 C 306.5 494.8,308.8 485.7,287 479 C 283.4 477.8,275.7 474.7,269.9 472 C 253.5 464.2,244.5 462.8,227.4 465.4 C 212.6 467.6,210.6 466.4,208.8 454 C 207 441.6,209.1 439.9,229 438 C 244.1 436.6,252.9 433.8,262.3 427.4 C 280.8 414.8,278.6 405.4,255.8 399.1 C 251.5 398,244.1 395.2,239.2 393 C 227.9 388,221.5 386.6,212.1 387.3 C 199.8 388.2,198.9 387.4,196.5 372.3 C 193.9 356.4,195.7 354,209.7 354 C 234.9 353.9,249.6 351.2,267.6 343.3 C 291.5 332.9,291.6 324.2,268 318 C 263.3 316.7,255 313.8,249.5 311.5 C 232.7 304.3,223.4 302.9,208.5 305.1 C 186.8 308.3,186.9 308.4,183.4 284.6 C 179.8 261,180.5 259.6,193.8 262.6 C 211.1 266.5,225.2 264.7,244 256.1 C 250.9 252.9,258.1 249.7,260 249 C 273.6 243.6,276.5 235.9,268.2 227.3 C 260.7 219.6,249 216.5,231 217.4 C 173.6 220.4,172.9 220.2,171.3 203.7 C 170.4 193.9,172.2 192.6,184.4 193.5 C 193.7 194.2,224 192.8,240.9 190.9 C 261.9 188.5,267.2 183.1,259.2 172.2 C 257.2 169.4,254.3 165,252.8 162.6 C 247.3 153.3,234.3 149.9,202 149.5 C 190.7 149.3,180.4 149.4,179 149.6"/></svg><span>© 2026 Raiatech · España</span></div><div class="links"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="mailto:hola@raiatech.com">hola@raiatech.com</a></div></div></footer>
 <script src="assets/fallos.js" defer></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

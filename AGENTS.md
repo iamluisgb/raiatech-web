@@ -4,9 +4,12 @@ Web estática de Raiatech (raiatech.com), sin build. Despliega GitHub Pages desd
 
 ## Design system
 
-- **Una sola fuente de estilo: `assets/raiatech.css`.** Tokens de color (oscuro por defecto, claro con `prefers-color-scheme:light`), base, cabecera, logo, pie, botones, tarjetas, notas por área (`.score`), estados (`.estado`) y páginas de texto (`.doc`). Toda página nueva la carga; en el `<style>` de cada página solo va lo exclusivo de esa página.
+- **Una sola fuente de estilo: `assets/raiatech.css`.** Tokens de color (oscuro por defecto, claro con `prefers-color-scheme:light`; `data-theme` en `<html>` manda sobre el sistema), base, cabecera, logo, pie, botones, tarjetas, notas por área (`.score`), estados (`.estado`) y páginas de texto (`.doc`). Toda página nueva la carga; en el `<style>` de cada página solo va lo exclusivo de esa página.
 - **Nunca colores sueltos** en las páginas: usa los tokens (`var(--acento)`, `var(--on-surface)`…). Si hace falta un color nuevo, se añade como token en los dos temas.
 - **`patterns.html`** (noindex) enseña todos los componentes. Tras tocar `raiatech.css`, ábrela en claro y en oscuro.
+- **Tema claro/oscuro: `assets/site.js`** pone el botón `.tema` en la cabecera, guarda la elección en `localStorage` («tema») y sigue al sistema mientras no eliges. Toda página con `raiatech.css` lleva en el `<head>`, antes de la hoja, el script de una línea que fija `data-theme` (cópialo de `index.html`) y carga `assets/site.js` con `defer`. Nunca escribas `@media (prefers-color-scheme…)` en una página: usa `:root[data-theme=…]`.
+- **Lenguaje de la portada** (inspirado en rat-labs.org, nov-2026): etiquetas de sección numeradas (`<p class="label"><span class="n">01</span> / Servicios</p>`), cabeceras de sección con texto a la izquierda y un dibujo de línea (`.dibujo`) a la derecha, y tarjetas solo donde hay un objeto que se compra o se abre (servicios, productos, dudas). Listas y cifras van en columnas con una línea arriba (`.col`, `.dato`, `.pasos li`). Los dibujos usan el trazo del ramiforme y el acento en un solo detalle; no inventes datos en ellos.
+- **Firma del pie:** `svg.firma` con el path del símbolo; `site.js` la dibuja al verse (desactivado con `prefers-reduced-motion`).
 - La cabecera y el pie compartidos se aplican a `body>header` y `body>footer`; un `header` dentro de otro bloque (como el del informe) no los hereda.
 
 ## Paleta «Earth» (materiales del abrigo de Puerto Roque)

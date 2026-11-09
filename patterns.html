@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<script>(function(){var t;try{t=localStorage.getItem('tema')}catch(e){}document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')})()</script>
 <link rel="stylesheet" href="assets/raiatech.css">
 <style>
 .pat{padding:40px 0 24px}.pat h2{font-family:var(--display);font-weight:500;font-size:1.3rem;margin:36px 0 14px}
@@ -23,7 +24,7 @@
 <main class="wrap pat">
 <p class="label">Design system</p>
 <h1 style="font-family:var(--display);margin:8px 0 6px">Componentes de Raiatech</h1>
-<p style="color:var(--on-surface);margin:0">Todo sale de <code>assets/raiatech.css</code>. Cambia el modo claro u oscuro del sistema para ver el otro tema. Reglas en <code>AGENTS.md</code>.</p>
+<p style="color:var(--on-surface);margin:0">Todo sale de <code>assets/raiatech.css</code>. Cambia de tema con el botón de la cabecera (o el modo del sistema) para ver el otro. Reglas en <code>AGENTS.md</code>.</p>
 
 <h2>Colores</h2>
 <div class="sws"><div class="sw"><i style="background:var(--bg)"></i><b>Fondo</b><code>--bg</code></div><div class="sw"><i style="background:var(--surface)"></i><b>Superficie</b><code>--surface</code></div><div class="sw"><i style="background:var(--surface-2)"></i><b>Superficie 2</b><code>--surface-2</code></div><div class="sw"><i style="background:var(--line)"></i><b>Línea</b><code>--line</code></div><div class="sw"><i style="background:var(--on-bg)"></i><b>Texto</b><code>--on-bg</code></div><div class="sw"><i style="background:var(--on-surface)"></i><b>Texto secundario</b><code>--on-surface</code></div><div class="sw"><i style="background:var(--acento)"></i><b>Acento (texto)</b><code>--acento</code></div><div class="sw"><i style="background:var(--electric)"></i><b>Botón</b><code>--electric</code></div><div class="sw"><i style="background:var(--ocre)"></i><b>Ocre (logo)</b><code>--ocre</code></div><div class="sw"><i style="background:var(--bien)"></i><b>Bien</b><code>--bien</code></div><div class="sw"><i style="background:var(--mejorable)"></i><b>Mejorable</b><code>--mejorable</code></div><div class="sw"><i style="background:var(--malo)"></i><b>Malo</b><code>--malo</code></div></div>
@@ -46,7 +47,15 @@
 <div style="max-width:480px"><div class="card"><h3>Auditoría técnica</h3><p>Texto secundario de una tarjeta.</p>
 <div class="score"><div>Rendimiento<i style="--p:100%"></i><b>4/4</b></div><div>Seguridad<i style="--p:62.5%"></i><b>2,5</b></div><small>Pie de la nota.</small></div>
 <p class="pie">Pie de tarjeta. <a href="#">Enlace</a></p></div></div>
+
+<h2>Etiqueta de sección numerada</h2>
+<p class="label"><span class="n">01</span> / Servicios</p>
+
+<h2>Dibujo de línea</h2>
+<p style="color:var(--on-surface);margin:0 0 12px">Trazo fino que hereda el tema (<code>.dibujo</code> con <code>.t</code>, <code>.fino</code>, <code>.guia</code>, <code>.pt</code>); el acento (<code>.ac</code>) solo en un detalle. Etiquetas en mono y mayúsculas. Ejemplos completos en la portada.</p>
+<div style="max-width:320px"><svg class="dibujo" viewBox="0 0 320 120" role="img" aria-label="Ejemplo de dibujo de línea"><path class="t fino guia" d="M10 60 H310"/><path class="t" d="M10 60 C60 10 90 110 140 60 S230 50 310 60"/><circle class="pt" cx="140" cy="60" r="3.5"/><circle class="pt ac" cx="310" cy="60" r="3.5"/><text x="10" y="14">ANTES</text><text x="310" y="14" text-anchor="end" class="ac">DESPUÉS</text></svg></div>
 </main>
 <footer><div class="wrap"><div>© 2026 Raiatech · España</div></div></footer>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

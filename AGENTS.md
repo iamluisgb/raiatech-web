@@ -34,5 +34,5 @@ Reglas:
 
 ## Contenido
 
-- No nombrar clientes ni publicar fichas de auditoría de terceros sin permiso. Sin precios publicados ni mención a Fundae hasta que Luis lo decida.
+- No nombrar clientes ni publicar fichas de auditoría de terceros sin permiso. En la consultoría (portada), sin precios publicados ni mención a Fundae hasta que Luis lo decida. /webs sí publica su precio (490 €, decidido el 9-nov-2026).
 - La voz y las fichas de contenido viven en `projects/content-engine` (`brands/raiatech.md`).
